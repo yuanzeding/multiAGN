@@ -1,0 +1,75 @@
+GENERAL:
+  RUN_ID: UGC2369bin20-SNRcut
+  INPUT: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+  OUTPUT: ./results/./UGC2369bin20-SNRcut
+  REDSHIFT: 0.0318
+  PARALLEL: true
+  NCPU: 24
+  LSF_DATA: lsf_MUSE_NFMAO
+  LSF_TEMP: lsf_XSL
+  OW_CONFIG: true
+  OW_OUTPUT: true
+  CONFIG_DIR: ./configFiles
+  TEMPLATE_DIR: ./spectralTemplates
+READ_DATA:
+  METHOD: MUSE_NFMAO
+  DEBUG: false
+  ORIGIN: 172,172
+  LMIN_TOT: 4600
+  LMAX_TOT: 9000
+  LMIN_SNR: 7800
+  LMAX_SNR: 8800
+SPATIAL_MASKING:
+  METHOD: default
+  MIN_SNR: 0.1
+  MASK: false
+SPATIAL_BINNING:
+  METHOD: voronoi
+  TARGET_SNR: 20.0
+  COVARIANCE: 0.0
+PREPARE_SPECTRA:
+  METHOD: default
+  VELSCALE: 40
+PREPARE_TEMPLATES:
+  METHOD: xsl_lin
+  LIBRARY: XSL/
+  NORM_TEMP: LIGHT
+KIN:
+  METHOD: ppxf
+  SPEC_MASK: specMask_KIN
+  LMIN: 8000
+  LMAX: 8900
+  SIGMA: 100
+  MOM: 4
+  ADEG: 8
+  MDEG: 4
+  REDDENING: null
+  MC_PPXF: 0
+GAS:
+  METHOD: false
+  LEVEL: BIN
+  LMIN: 4500
+  LMAX: 9000
+  ERRORS: 0
+  REDDENING: 0.1,0.1
+  EBmV: null
+  EMI_FILE: emissionLines.config
+SFH:
+  METHOD: ppxf
+  LMIN: 4600
+  LMAX: 9000
+  SPEC_MASK: specMask_SFH
+  MOM: 4
+  MDEG: 4
+  REGUL_ERR: 0.1
+  NOISE: 1.0
+  FIXED: true
+LS:
+  METHOD: false
+  TYPE: SPP
+  LS_FILE: lsBands.config
+  CONV_COR: 8.4
+  SPP_FILE: MILES_KB_LIS8.4.fits
+  MC_LS: 30
+  NWALKER: 10
+  NCHAIN: 100

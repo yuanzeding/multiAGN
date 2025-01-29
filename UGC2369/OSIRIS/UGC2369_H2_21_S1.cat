@@ -1,0 +1,24 @@
+###################################################
+# col 1:     Id 
+# col 2:     number of connected spaxels above detection threshold 
+# col 3-5:   geometrical centroid position (units=spaxels) 
+# col 6-8:   flux-weighted-centroid position (units=spaxels) 
+# col 9-11:  minimum coordinates of the box containing the object (units=spaxels) 
+# col 12-14: maximum coordinates of the box containing the object (units=spaxels) 
+# col 15:    projected iso-area (pixels)
+# col 16:    projected size in wavelenght dimension (pixels)
+# col 17-18: IsoFlux and IsoErr (units of the original datacube)
+# col 19-20: Flux and Err within the box defined by the coordinates in col 9-14
+# col 21-22: Flux and Err in the Cylindrical apertures defined in the parameter file
+# col 23-25: geometrical centroid in units of ra, dec and lambda
+# col 26-28: flux-weighted-centroid in units of ra, dec and lambda
+# col 29:    Associated object Id (=0 if no association found/requested)
+# 
+#      1        2       3       4       5        6       7       8       9      10      11      12      13      14       15      16           17           18           19           20           21           22            23            24       25            26            27       28      29
+# 
+       1     3296    10.46   18.77   45.66    10.45   18.76   46.00       5      12       1      17      25      93      115      93   6.9545E+02   1.6278E+00   1.1278E+03   3.7053E+00   6.0898E+00   2.4680E+00  02:54:01.824   14:58:15.28  2317.17  02:54:01.824   14:58:15.27  2317.25       0
+       2      997     9.97   46.69   46.00     9.85   46.54   45.95       7      45       1      14      52      93       37      93   1.5181E+02   8.9571E-01   2.7017E+02   2.1972E+00   1.8857E+00   1.3736E+00  02:54:01.821   14:58:18.07  2317.25  02:54:01.820   14:58:18.05  2317.24       0
+       3        4    13.00   15.25   19.75    13.01   15.27   19.74      13      15      19      14      16      21        3       3   3.8758E-01   5.5121E-02   6.9358E-01   9.5802E-02   1.4964E+00   1.2236E+00  02:54:01.842   14:58:14.92  2310.69  02:54:01.842   14:58:14.92  2310.69       0
+       4        4    10.00   14.00   27.75    10.01   13.96   27.71      10      14      27      11      15      29        4       3   3.6368E-01   5.4071E-02   7.7960E-01   9.4004E-02   1.6321E+00   1.2778E+00  02:54:01.821   14:58:14.80  2312.69  02:54:01.821   14:58:14.79  2312.68       0
+       5        5    10.70   25.90   53.10    10.88   26.03   53.10      10      26      53      12      27      54        3       2   7.3650E-01   6.6936E-02   9.4961E-01   1.0332E-01   1.2503E+00   1.1186E+00  02:54:01.826   14:58:15.99  2319.02  02:54:01.827   14:58:16.00  2319.03       0
+       6        4    11.00   13.75   76.00    11.01   13.73   76.00      11      14      76      12      15      77        3       2   3.9773E-01   5.6413E-02   5.5356E-01   7.9780E-02   1.3321E+00   1.1545E+00  02:54:01.828   14:58:14.77  2324.75  02:54:01.828   14:58:14.77  2324.75       0

@@ -1,0 +1,216 @@
+07/22/24 21:54:39 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+07/22/24 21:54:39 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+07/22/24 21:54:39 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+07/22/24 21:54:39 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+07/22/24 21:54:41 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+07/22/24 21:54:41 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+07/22/24 21:54:43 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8900A.
+07/22/24 21:55:01 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 8000A to 8900A, while ignoring the wavelength range affected by the LGS.
+07/22/24 21:55:01 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+07/22/24 21:55:01 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+07/22/24 21:55:01 - INFO     - _spatialMasking: Using the spatial masking routine for default
+07/22/24 21:55:34 - INFO     - default: Masking defunct spaxels: 16209 spaxels are rejected.
+07/22/24 21:55:34 - INFO     - default: Masking low signal-to-noise spaxels: 56267 spaxels are rejected.
+07/22/24 21:55:34 - INFO     - default: No maskfile specified.
+07/22/24 21:55:34 - INFO     - default: Combined mask: 65870 spaxels are rejected.
+07/22/24 21:55:34 - INFO     - default: Wrote mask file: ./results/./UGC2369bin35/UGC2369bin35_mask.fits
+07/22/24 21:55:34 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+07/22/24 21:55:34 - INFO     - voronoi: Defining the Voronoi bins
+07/22/24 21:58:23 - INFO     - voronoi: 214 Voronoi bins generated!
+07/22/24 21:58:24 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin35/UGC2369bin35_table.fits
+07/22/24 21:58:24 - INFO     - _prepareSpectra: Using the routine for default
+07/22/24 21:58:27 - INFO     - default: Applied spatial bins to lin-data
+07/22/24 21:58:27 - INFO     - default: Wrote: ./results/./UGC2369bin35/UGC2369bin35_BinSpectra_linear.fits
+07/22/24 21:59:39 - INFO     - default: Log-rebinned the spectra
+07/22/24 22:00:49 - INFO     - default: Log-rebinned the error spectra
+07/22/24 22:01:09 - INFO     - default: Wrote: ./results/./UGC2369bin35/UGC2369bin35_AllSpectra.fits
+07/22/24 22:01:24 - INFO     - default: Applied spatial bins to log-data
+07/22/24 22:01:24 - INFO     - default: Wrote: ./results/./UGC2369bin35/UGC2369bin35_BinSpectra.fits
+07/22/24 22:01:25 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+07/22/24 22:01:25 - INFO     - ppxf: Using full spectral library for PPXF
+07/22/24 22:01:25 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+07/22/24 22:01:34 - INFO     - xsl_lin: Prepared the stellar population templates
+07/22/24 22:01:34 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+07/22/24 22:01:34 - INFO     - ppxf: Running PPXF in parallel mode
+07/22/24 22:06:57 - INFO     - ppxf: Running PPXF on 214 spectra took 323.47s using 8 cores
+07/22/24 22:06:57 - INFO     - ppxf: There were no problems in the analysis.
+07/22/24 22:06:57 - INFO     - ppxf: Calculating Lambda_R
+07/22/24 22:06:57 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+07/22/24 22:06:58 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_kin.fits
+07/22/24 22:06:58 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_kin-bestfit.fits
+07/22/24 22:06:58 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_kin-optimalTemplates.fits
+07/22/24 22:07:15 - INFO     - _plotting: Produced stellar kinematics maps
+07/22/24 22:07:15 - WARNING  - _emissionLines: The module was turned off.
+07/22/24 22:07:15 - INFO     - _starFormationHistories: Using the starFormationHistories routine 'ppxf.py'
+07/22/24 22:07:15 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+07/22/24 22:07:25 - INFO     - xsl_lin: Prepared the stellar population templates
+07/22/24 22:07:25 - INFO     - ppxf: Using regular spectra without any emission-correction at ./results/./UGC2369bin35/UGC2369bin35_BinSpectra.fits
+07/22/24 22:07:25 - INFO     - ppxf: Stellar kinematics are FIXED to the results obtained before.
+07/22/24 22:07:25 - INFO     - ppxf: Running PPXF in parallel mode
+07/22/24 22:07:46 - INFO     - ppxf: Running PPXF on 214 spectra took 20.51s using 8 cores
+07/22/24 22:07:46 - WARNING  - ppxf: There was a problem in the analysis of the spectra with the following BINID's: [  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14  15  16  17
+  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35
+  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53
+  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71
+  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89
+  90  91  92  93  94  95  96  97  98  99 100 101 102 103 104 105 106 107
+ 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125
+ 126 127 128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143
+ 144 145 146 147 148 149 150 151 152 153 154 155 156 157 158 159 160 161
+ 162 163 164 165 166 167 168 169 170 171 172 173 174 175 176 177 178 179
+ 180 181 182 183 184 185 186 187 188 189 190 191 192 193 194 195 196 197
+ 198 199 200 201 202 203 204 205 206 207 208 209 210 211 212 213]
+07/22/24 22:07:46 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_sfh.fits
+07/22/24 22:07:46 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_sfh-weights.fits
+07/22/24 22:07:46 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_sfh-bestfit.fits
+07/22/24 22:07:46 - ERROR    - _plotting: x and y arguments to pcolormesh cannot have non-finite values or be of type numpy.ma.core.MaskedArray with masked values
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist/lib/python3.6/site-packages/gistPipeline/plotting/_plotting.py", line 48, in generatePlots
+    gistPlot_sfh.plotMaps('SFH', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist/lib/python3.6/site-packages/gistPipeline/plotting/gistPlot_sfh.py", line 173, in plotMaps
+    grid.cbar_axes[iterate].colorbar(image)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 315, in wrapper
+    return func(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist/lib/python3.6/site-packages/mpl_toolkits/axes_grid1/axes_grid.py", line 48, in colorbar
+    self, mappable, orientation=orientation, ticks=ticks, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist/lib/python3.6/site-packages/mpl_toolkits/axes_grid1/colorbar.py", line 678, in __init__
+    ColorbarBase.__init__(self, ax, **kw)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist/lib/python3.6/site-packages/mpl_toolkits/axes_grid1/colorbar.py", line 386, in __init__
+    self.update_artists()
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist/lib/python3.6/site-packages/mpl_toolkits/axes_grid1/colorbar.py", line 449, in update_artists
+    self._add_solids(X, Y, C)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist/lib/python3.6/site-packages/mpl_toolkits/axes_grid1/colorbar.py", line 532, in _add_solids
+    cmap=self.cmap, norm=self.norm, shading='flat', alpha=self.alpha)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist/lib/python3.6/site-packages/matplotlib/__init__.py", line 1447, in inner
+    return func(ax, *map(sanitize_sequence, args), **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist/lib/python3.6/site-packages/matplotlib/axes/_axes.py", line 6093, in pcolormesh
+    shading=shading, kwargs=kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist/lib/python3.6/site-packages/matplotlib/axes/_axes.py", line 5576, in _pcolorargs
+    'x and y arguments to pcolormesh cannot have '
+ValueError: x and y arguments to pcolormesh cannot have non-finite values or be of type numpy.ma.core.MaskedArray with masked values
+07/22/24 22:07:46 - ERROR    - _plotting: Failed to produce SFH maps.
+07/22/24 22:07:46 - WARNING  - _lineStrengths: The module was turned off.
+07/22/24 22:07:48 - INFO     - MainPipeline: The GIST completed successfully.
+07/22/24 22:09:33 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+07/22/24 22:09:33 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+07/22/24 22:09:33 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+07/22/24 22:09:33 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+07/22/24 22:09:33 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+07/22/24 22:09:33 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+07/22/24 22:09:34 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8900A.
+07/22/24 22:09:52 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 8000A to 8900A, while ignoring the wavelength range affected by the LGS.
+07/22/24 22:09:52 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+07/22/24 22:09:52 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+07/22/24 22:09:52 - INFO     - _spatialMasking: Results of the spatialMasking module are already in the output directory. Module is skipped.
+07/22/24 22:09:52 - INFO     - _spatialBinning: Results of the module are already in the output directory. Module is skipped.
+07/22/24 22:09:52 - INFO     - _prepareSpectra: Results of the module are already in the output directory. Module is skipped.
+07/22/24 22:09:52 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+07/22/24 22:09:53 - INFO     - ppxf: Using full spectral library for PPXF
+07/22/24 22:09:53 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+07/22/24 22:09:56 - INFO     - xsl_lin: Prepared the stellar population templates
+07/22/24 22:09:56 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+07/22/24 22:09:56 - INFO     - ppxf: Running PPXF in parallel mode
+07/22/24 22:15:33 - INFO     - ppxf: Running PPXF on 214 spectra took 337.19s using 8 cores
+07/22/24 22:15:33 - INFO     - ppxf: There were no problems in the analysis.
+07/22/24 22:15:33 - INFO     - ppxf: Calculating Lambda_R
+07/22/24 22:15:33 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+07/22/24 22:15:34 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_kin.fits
+07/22/24 22:15:34 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_kin-bestfit.fits
+07/22/24 22:15:34 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_kin-optimalTemplates.fits
+07/22/24 22:15:47 - INFO     - _plotting: Produced stellar kinematics maps
+07/22/24 22:15:47 - WARNING  - _emissionLines: The module was turned off.
+07/22/24 22:15:47 - INFO     - _starFormationHistories: Using the starFormationHistories routine 'ppxf.py'
+07/22/24 22:15:47 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+07/22/24 22:16:00 - INFO     - xsl_lin: Prepared the stellar population templates
+07/22/24 22:16:00 - INFO     - ppxf: Using regular spectra without any emission-correction at ./results/./UGC2369bin35/UGC2369bin35_BinSpectra.fits
+07/22/24 22:16:00 - INFO     - ppxf: Stellar kinematics are FIXED to the results obtained before.
+07/22/24 22:16:01 - INFO     - ppxf: Running PPXF in parallel mode
+07/22/24 22:25:35 - INFO     - ppxf: Running PPXF on 214 spectra took 574.44s using 8 cores
+07/22/24 22:25:35 - INFO     - ppxf: There were no problems in the analysis.
+07/22/24 22:25:35 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_sfh.fits
+07/22/24 22:25:35 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_sfh-weights.fits
+07/22/24 22:25:35 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_sfh-bestfit.fits
+07/22/24 22:25:41 - INFO     - _plotting: Produced SFH maps
+07/22/24 22:25:41 - WARNING  - _lineStrengths: The module was turned off.
+07/22/24 22:25:43 - INFO     - MainPipeline: The GIST completed successfully.
+07/22/24 22:29:30 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+07/22/24 22:29:30 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+07/22/24 22:29:30 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+07/22/24 22:29:30 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+07/22/24 22:29:30 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+07/22/24 22:29:30 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+07/22/24 22:29:31 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+07/22/24 22:30:00 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A, while ignoring the wavelength range affected by the LGS.
+07/22/24 22:30:00 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+07/22/24 22:30:00 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+07/22/24 22:30:00 - INFO     - _spatialMasking: Using the spatial masking routine for default
+07/22/24 22:30:54 - INFO     - default: Masking defunct spaxels: 15982 spaxels are rejected.
+07/22/24 22:30:54 - INFO     - default: Masking low signal-to-noise spaxels: 66935 spaxels are rejected.
+07/22/24 22:30:54 - INFO     - default: No maskfile specified.
+07/22/24 22:30:54 - INFO     - default: Combined mask: 76075 spaxels are rejected.
+07/22/24 22:30:54 - INFO     - default: Wrote mask file: ./results/./UGC2369bin35/UGC2369bin35_mask.fits
+07/22/24 22:30:54 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+07/22/24 22:30:54 - INFO     - voronoi: Defining the Voronoi bins
+07/22/24 22:31:49 - INFO     - voronoi: 62 Voronoi bins generated!
+07/22/24 22:31:49 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin35/UGC2369bin35_table.fits
+07/22/24 22:31:49 - INFO     - _prepareSpectra: Using the routine for default
+07/22/24 22:31:51 - INFO     - default: Applied spatial bins to lin-data
+07/22/24 22:31:51 - INFO     - default: Wrote: ./results/./UGC2369bin35/UGC2369bin35_BinSpectra_linear.fits
+07/22/24 22:33:01 - INFO     - default: Log-rebinned the spectra
+07/22/24 22:34:11 - INFO     - default: Log-rebinned the error spectra
+07/22/24 22:34:31 - INFO     - default: Wrote: ./results/./UGC2369bin35/UGC2369bin35_AllSpectra.fits
+07/22/24 22:34:44 - INFO     - default: Applied spatial bins to log-data
+07/22/24 22:34:44 - INFO     - default: Wrote: ./results/./UGC2369bin35/UGC2369bin35_BinSpectra.fits
+07/22/24 22:34:45 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+07/22/24 22:34:45 - INFO     - ppxf: Using full spectral library for PPXF
+07/22/24 22:34:45 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+07/22/24 22:34:47 - INFO     - xsl_lin: Prepared the stellar population templates
+07/22/24 22:34:47 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+07/22/24 22:34:47 - INFO     - ppxf: Running PPXF in parallel mode
+07/22/24 22:36:38 - INFO     - ppxf: Running PPXF on 62 spectra took 110.98s using 8 cores
+07/22/24 22:36:38 - INFO     - ppxf: There were no problems in the analysis.
+07/22/24 22:36:38 - INFO     - ppxf: Calculating Lambda_R
+07/22/24 22:36:38 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+07/22/24 22:36:39 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_kin.fits
+07/22/24 22:36:39 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_kin-bestfit.fits
+07/22/24 22:36:39 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_kin-optimalTemplates.fits
+07/22/24 22:36:55 - INFO     - _plotting: Produced stellar kinematics maps
+07/22/24 22:36:55 - WARNING  - _emissionLines: The module was turned off.
+07/22/24 22:36:55 - INFO     - _starFormationHistories: Using the starFormationHistories routine 'ppxf.py'
+07/22/24 22:36:55 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+07/22/24 22:37:06 - INFO     - xsl_lin: Prepared the stellar population templates
+07/22/24 22:37:06 - INFO     - ppxf: Using regular spectra without any emission-correction at ./results/./UGC2369bin35/UGC2369bin35_BinSpectra.fits
+07/22/24 22:37:06 - INFO     - ppxf: Stellar kinematics are FIXED to the results obtained before.
+07/22/24 22:37:06 - INFO     - ppxf: Running PPXF in parallel mode
+07/22/24 22:39:59 - INFO     - ppxf: Running PPXF on 62 spectra took 173.07s using 8 cores
+07/22/24 22:39:59 - INFO     - ppxf: There were no problems in the analysis.
+07/22/24 22:39:59 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_sfh.fits
+07/22/24 22:39:59 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_sfh-weights.fits
+07/22/24 22:39:59 - INFO     - ppxf: Wrote: ./results/./UGC2369bin35/UGC2369bin35_sfh-bestfit.fits
+07/22/24 22:40:03 - INFO     - _plotting: Produced SFH maps
+07/22/24 22:40:03 - WARNING  - _lineStrengths: The module was turned off.
+07/22/24 22:40:05 - INFO     - MainPipeline: The GIST completed successfully.

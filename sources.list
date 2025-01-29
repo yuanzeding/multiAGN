@@ -1,0 +1,10 @@
+|   Name    | Field  | RA    |  Dec   |x      |y      | EBV   |z_simbad| z_sys  | zerr  |contam|vdispe | Av      | r     | i     | z    |  MB    | Comments                                                                                                       |
+|   char    | char   | double| double |double | double|double | double | double |double | char |double |double   |double | double|double|double  |char                                                                                                            |
+|   unit    | unit   |   unit|  unit  |   unit|   unit|   unit|   unit | unit   | unit  | unit | unit  |unit     | unit  | unit  |unit  |  unit  |unit                                                                                                            |
+|  null     | null   |   null|  null  |   null|   null|   null|   null | null   |null   | null | null  | null    | null  | null  |null  |  null  |null                                                                                                            |
+ UGC2369_1   UGC2369  43.5078  14.9701  50.46   50.41    0.031  0.032    0.0322   0.001  False  140.4     2.79    16.5    16.5           -26.4472
+ UGC2369_2   UGC2369  43.5072  14.9704  50.46   50.41    0.031  0.032   0.03206  0.00002 False   93.3     1.87    16.5    16.5           -26.4472
+ UGC2369_3   UGC2369  43.5076  14.9708  50.46   50.41    0.031  0.032    0.0318   0.001  False   208      3.08    16.5    16.5           -26.4472
+ ESO353-9    ESO353-9 22.9600 -33.1192  50.46   50.41    0.031  0.0169   0.0169   0.001  False  -100     -1.00    16.5    16.5           -26.4472
+ ESO439-9    ESO439-9 171.84  -29.2575  50.46   50.41    0.031  0.0247   0.0247   0.001  False  -100     -1.00    16.5    16.5           -26.4472
+ Mrk516      Mrk516   329.092   7.3667  50.46   50.41    0.031  0.0285   0.0285   0.001  False  -100     -1.00    16.5    16.5           -26.4472

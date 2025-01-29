@@ -1,0 +1,54 @@
+10/05/24 06:01:04 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+10/05/24 06:01:04 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+10/05/24 06:01:04 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/Mrk_516_DATACUBE_FINAL.fits
+10/05/24 06:01:04 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+10/05/24 06:01:04 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+10/05/24 06:01:04 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0285
+10/05/24 06:01:05 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+10/05/24 06:01:23 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A, while ignoring the wavelength range affected by the LGS.
+10/05/24 06:01:23 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+10/05/24 06:01:23 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 114920 spectra!
+10/05/24 06:01:24 - INFO     - _spatialMasking: Using the spatial masking routine for default
+10/05/24 06:01:56 - INFO     - default: Masking defunct spaxels: 13745 spaxels are rejected.
+10/05/24 06:01:56 - INFO     - default: Masking low signal-to-noise spaxels: 64475 spaxels are rejected.
+10/05/24 06:01:56 - INFO     - default: No maskfile specified.
+10/05/24 06:01:56 - INFO     - default: Combined mask: 72975 spaxels are rejected.
+10/05/24 06:01:56 - INFO     - default: Wrote mask file: ./results/./Mrk516bin20-SNRcut/Mrk516bin20-SNRcut_mask.fits
+10/05/24 06:01:56 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+10/05/24 06:01:56 - INFO     - voronoi: Defining the Voronoi bins
+10/05/24 06:04:06 - INFO     - voronoi: 485 Voronoi bins generated!
+10/05/24 06:04:06 - INFO     - voronoi: Wrote Voronoi table: ./results/./Mrk516bin20-SNRcut/Mrk516bin20-SNRcut_table.fits
+10/05/24 06:04:06 - INFO     - _prepareSpectra: Using the routine for default
+10/05/24 06:04:08 - INFO     - default: Applied spatial bins to lin-data
+10/05/24 06:04:08 - INFO     - default: Wrote: ./results/./Mrk516bin20-SNRcut/Mrk516bin20-SNRcut_BinSpectra_linear.fits
+10/05/24 06:05:15 - INFO     - default: Log-rebinned the spectra
+10/05/24 06:06:23 - INFO     - default: Log-rebinned the error spectra
+10/05/24 06:06:46 - INFO     - default: Wrote: ./results/./Mrk516bin20-SNRcut/Mrk516bin20-SNRcut_AllSpectra.fits
+10/05/24 06:07:01 - INFO     - default: Applied spatial bins to log-data
+10/05/24 06:07:01 - INFO     - default: Wrote: ./results/./Mrk516bin20-SNRcut/Mrk516bin20-SNRcut_BinSpectra.fits
+10/05/24 06:07:02 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+10/05/24 06:07:02 - INFO     - ppxf: Using full spectral library for PPXF
+10/05/24 06:07:02 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+10/05/24 06:07:13 - INFO     - xsl_lin: Prepared the stellar population templates
+10/05/24 06:07:13 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+10/05/24 06:07:13 - INFO     - ppxf: Running PPXF in parallel mode
+10/05/24 06:11:02 - INFO     - ppxf: Running PPXF on 485 spectra took 229.11s using 24 cores
+10/05/24 06:11:02 - INFO     - ppxf: There were no problems in the analysis.
+10/05/24 06:11:02 - INFO     - ppxf: Calculating Lambda_R
+10/05/24 06:11:02 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+10/05/24 06:11:02 - INFO     - ppxf: Wrote: ./results/./Mrk516bin20-SNRcut/Mrk516bin20-SNRcut_kin.fits
+10/05/24 06:11:02 - INFO     - ppxf: Wrote: ./results/./Mrk516bin20-SNRcut/Mrk516bin20-SNRcut_kin-bestfit.fits
+10/05/24 06:11:02 - INFO     - ppxf: Wrote: ./results/./Mrk516bin20-SNRcut/Mrk516bin20-SNRcut_kin-optimalTemplates.fits
+10/05/24 06:11:16 - INFO     - _plotting: Produced stellar kinematics maps
+10/05/24 06:11:16 - WARNING  - _emissionLines: The module was turned off.
+10/05/24 06:11:16 - WARNING  - _starFormationHistories: The module was turned off.
+10/05/24 06:11:16 - WARNING  - _lineStrengths: The module was turned off.
+10/05/24 06:11:17 - INFO     - MainPipeline: The GIST completed successfully.

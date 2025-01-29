@@ -1,0 +1,242 @@
+08/09/24 20:06:46 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+08/09/24 20:06:46 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+08/09/24 20:06:46 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+08/09/24 20:06:46 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+08/09/24 20:06:46 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+08/09/24 20:06:46 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+08/09/24 20:06:49 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+08/09/24 20:06:49 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 5155A to 5175A, while ignoring the wavelength range affected by the LGS.
+08/09/24 20:06:49 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+08/09/24 20:06:49 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+08/09/24 20:06:49 - INFO     - _spatialMasking: Using the spatial masking routine for default
+08/09/24 20:07:16 - INFO     - default: Masking defunct spaxels: 44864 spaxels are rejected.
+08/09/24 20:07:16 - INFO     - default: Masking low signal-to-noise spaxels: 56800 spaxels are rejected.
+08/09/24 20:07:16 - INFO     - default: No maskfile specified.
+08/09/24 20:07:16 - INFO     - default: Combined mask: 67541 spaxels are rejected.
+08/09/24 20:07:16 - INFO     - default: Wrote mask file: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_mask.fits
+08/09/24 20:07:16 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+08/09/24 20:07:16 - INFO     - voronoi: Defining the Voronoi bins
+08/09/24 20:14:46 - INFO     - voronoi: 1357 Voronoi bins generated!
+08/09/24 20:14:47 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_table.fits
+08/09/24 20:14:47 - INFO     - _prepareSpectra: Using the routine for default
+08/09/24 20:14:49 - INFO     - default: Applied spatial bins to lin-data
+08/09/24 20:14:50 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_BinSpectra_linear.fits
+08/09/24 20:15:45 - INFO     - default: Log-rebinned the spectra
+08/09/24 20:16:41 - INFO     - default: Log-rebinned the error spectra
+08/09/24 20:16:59 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_AllSpectra.fits
+08/09/24 20:17:12 - INFO     - default: Applied spatial bins to log-data
+08/09/24 20:17:12 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_BinSpectra.fits
+08/09/24 20:17:13 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+08/09/24 20:17:13 - INFO     - ppxf: Using full spectral library for PPXF
+08/09/24 20:17:13 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+08/09/24 20:17:25 - INFO     - xsl_lin: Prepared the stellar population templates
+08/09/24 20:17:25 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+08/09/24 20:17:25 - INFO     - ppxf: Running PPXF in parallel mode
+08/09/24 20:30:40 - INFO     - ppxf: Running PPXF on 1357 spectra took 795.63s using 16 cores
+08/09/24 20:30:40 - INFO     - ppxf: There were no problems in the analysis.
+08/09/24 20:30:40 - INFO     - ppxf: Calculating Lambda_R
+08/09/24 20:30:40 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+08/09/24 20:30:41 - INFO     - ppxf: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_kin.fits
+08/09/24 20:30:41 - INFO     - ppxf: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_kin-bestfit.fits
+08/09/24 20:30:41 - INFO     - ppxf: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_kin-optimalTemplates.fits
+08/09/24 20:30:59 - INFO     - _plotting: Produced stellar kinematics maps
+08/09/24 20:30:59 - WARNING  - _emissionLines: The module was turned off.
+08/09/24 20:30:59 - WARNING  - _starFormationHistories: The module was turned off.
+08/09/24 20:30:59 - WARNING  - _lineStrengths: The module was turned off.
+08/09/24 20:31:00 - INFO     - MainPipeline: The GIST completed successfully.
+08/10/24 22:50:58 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+08/10/24 22:50:58 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+08/10/24 22:50:58 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+08/10/24 22:50:58 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+08/10/24 22:50:58 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+08/10/24 22:50:58 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+08/10/24 22:50:59 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+08/10/24 22:50:59 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 4858A to 4868A, while ignoring the wavelength range affected by the LGS.
+08/10/24 22:50:59 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+08/10/24 22:50:59 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+08/10/24 22:50:59 - INFO     - _spatialMasking: Using the spatial masking routine for default
+08/10/24 22:51:24 - INFO     - default: Masking defunct spaxels: 42054 spaxels are rejected.
+08/10/24 22:51:24 - INFO     - default: Masking low signal-to-noise spaxels: 55773 spaxels are rejected.
+08/10/24 22:51:24 - INFO     - default: No maskfile specified.
+08/10/24 22:51:24 - INFO     - default: Combined mask: 66455 spaxels are rejected.
+08/10/24 22:51:24 - INFO     - default: Wrote mask file: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_mask.fits
+08/10/24 22:51:24 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+08/10/24 22:51:24 - INFO     - voronoi: Defining the Voronoi bins
+08/10/24 22:56:31 - INFO     - voronoi: 5312 Voronoi bins generated!
+08/10/24 22:56:34 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_table.fits
+08/10/24 22:56:34 - INFO     - _prepareSpectra: Using the routine for default
+08/10/24 22:56:37 - INFO     - default: Applied spatial bins to lin-data
+08/10/24 22:56:37 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_BinSpectra_linear.fits
+08/10/24 22:57:32 - INFO     - default: Log-rebinned the spectra
+08/10/24 22:58:27 - INFO     - default: Log-rebinned the error spectra
+08/10/24 22:58:46 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_AllSpectra.fits
+08/10/24 22:59:21 - INFO     - default: Applied spatial bins to log-data
+08/10/24 22:59:21 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_BinSpectra.fits
+08/10/24 22:59:22 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+08/10/24 22:59:23 - INFO     - ppxf: Using full spectral library for PPXF
+08/10/24 22:59:23 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+08/10/24 22:59:25 - INFO     - xsl_lin: Prepared the stellar population templates
+08/10/24 22:59:25 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+08/10/24 22:59:25 - INFO     - ppxf: Running PPXF in parallel mode
+08/10/24 23:06:09 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 8, in <module>
+    sys.exit(main())
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/MainPipeline.py", line 132, in runGIST
+    _ = _stellarKinematics.stellarKinematics_Module(config)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/stellarKinematics/_stellarKinematics.py", line 49, in stellarKinematics_Module
+    module.extractStellarKinematics(config)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/stellarKinematics/ppxf.py", line 328, in extractStellarKinematics
+    ppxf_tmp = [outQueue.get() for _ in range(nbins)]
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/stellarKinematics/ppxf.py", line 328, in <listcomp>
+    ppxf_tmp = [outQueue.get() for _ in range(nbins)]
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/multiprocessing/queues.py", line 94, in get
+    res = self._recv_bytes()
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/multiprocessing/connection.py", line 407, in _recv_bytes
+    buf = self._recv(4)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/multiprocessing/connection.py", line 379, in _recv
+    chunk = read(handle, remaining)
+KeyboardInterrupt
+08/10/24 23:06:53 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+08/10/24 23:06:53 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+08/10/24 23:06:53 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+08/10/24 23:06:53 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+08/10/24 23:06:53 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+08/10/24 23:06:53 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+08/10/24 23:06:55 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+08/10/24 23:06:55 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 5000A to 5015A, while ignoring the wavelength range affected by the LGS.
+08/10/24 23:06:55 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+08/10/24 23:06:55 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+08/10/24 23:06:55 - INFO     - _spatialMasking: Using the spatial masking routine for default
+08/10/24 23:07:19 - INFO     - default: Masking defunct spaxels: 43099 spaxels are rejected.
+08/10/24 23:07:19 - INFO     - default: Masking low signal-to-noise spaxels: 56900 spaxels are rejected.
+08/10/24 23:07:19 - INFO     - default: No maskfile specified.
+08/10/24 23:07:19 - INFO     - default: Combined mask: 67618 spaxels are rejected.
+08/10/24 23:07:19 - INFO     - default: Wrote mask file: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_mask.fits
+08/10/24 23:07:19 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+08/10/24 23:07:19 - INFO     - voronoi: Defining the Voronoi bins
+08/10/24 23:11:23 - INFO     - voronoi: 496 Voronoi bins generated!
+08/10/24 23:11:23 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_table.fits
+08/10/24 23:11:23 - INFO     - _prepareSpectra: Using the routine for default
+08/10/24 23:11:25 - INFO     - default: Applied spatial bins to lin-data
+08/10/24 23:11:25 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_BinSpectra_linear.fits
+08/10/24 23:12:19 - INFO     - default: Log-rebinned the spectra
+08/10/24 23:13:14 - INFO     - default: Log-rebinned the error spectra
+08/10/24 23:13:32 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_AllSpectra.fits
+08/10/24 23:13:57 - INFO     - default: Applied spatial bins to log-data
+08/10/24 23:13:57 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_BinSpectra.fits
+08/10/24 23:13:58 - WARNING  - _stellarKinematics: The module was turned off.
+08/10/24 23:13:58 - WARNING  - _emissionLines: The module was turned off.
+08/10/24 23:13:58 - WARNING  - _starFormationHistories: The module was turned off.
+08/10/24 23:13:58 - WARNING  - _lineStrengths: The module was turned off.
+08/10/24 23:13:58 - INFO     - MainPipeline: The GIST completed successfully.
+08/10/24 23:40:16 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+08/10/24 23:40:16 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+08/10/24 23:40:16 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+08/10/24 23:40:16 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+08/10/24 23:40:16 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+08/10/24 23:40:16 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+08/10/24 23:40:17 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+08/10/24 23:40:17 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 5000A to 5015A, while ignoring the wavelength range affected by the LGS.
+08/10/24 23:40:17 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+08/10/24 23:40:17 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+08/10/24 23:40:18 - INFO     - _spatialMasking: Using the spatial masking routine for default
+08/10/24 23:40:42 - INFO     - default: Masking defunct spaxels: 43099 spaxels are rejected.
+08/10/24 23:40:42 - INFO     - default: Masking low signal-to-noise spaxels: 53186 spaxels are rejected.
+08/10/24 23:40:42 - INFO     - default: No maskfile specified.
+08/10/24 23:40:42 - INFO     - default: Combined mask: 63968 spaxels are rejected.
+08/10/24 23:40:42 - INFO     - default: Wrote mask file: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_mask.fits
+08/10/24 23:40:42 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+08/10/24 23:40:42 - INFO     - voronoi: Defining the Voronoi bins
+08/10/24 23:46:14 - INFO     - voronoi: 477 Voronoi bins generated!
+08/10/24 23:46:14 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_table.fits
+08/10/24 23:46:14 - INFO     - _prepareSpectra: Using the routine for default
+08/10/24 23:46:16 - INFO     - default: Applied spatial bins to lin-data
+08/10/24 23:46:16 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_BinSpectra_linear.fits
+08/10/24 23:47:10 - INFO     - default: Log-rebinned the spectra
+08/10/24 23:48:05 - INFO     - default: Log-rebinned the error spectra
+08/10/24 23:48:23 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_AllSpectra.fits
+08/10/24 23:48:48 - INFO     - default: Applied spatial bins to log-data
+08/10/24 23:48:48 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_BinSpectra.fits
+08/10/24 23:48:49 - WARNING  - _stellarKinematics: The module was turned off.
+08/10/24 23:48:49 - WARNING  - _emissionLines: The module was turned off.
+08/10/24 23:48:49 - WARNING  - _starFormationHistories: The module was turned off.
+08/10/24 23:48:49 - WARNING  - _lineStrengths: The module was turned off.
+08/10/24 23:48:50 - INFO     - MainPipeline: The GIST completed successfully.
+08/10/24 23:50:29 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+08/10/24 23:50:29 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+08/10/24 23:50:29 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+08/10/24 23:50:29 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+08/10/24 23:50:29 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+08/10/24 23:50:29 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+08/10/24 23:50:31 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+08/10/24 23:50:31 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 5000A to 5015A, while ignoring the wavelength range affected by the LGS.
+08/10/24 23:50:31 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+08/10/24 23:50:31 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+08/10/24 23:50:31 - INFO     - _spatialMasking: Using the spatial masking routine for default
+08/10/24 23:50:55 - INFO     - default: Masking defunct spaxels: 43099 spaxels are rejected.
+08/10/24 23:50:55 - INFO     - default: Masking low signal-to-noise spaxels: 53887 spaxels are rejected.
+08/10/24 23:50:55 - INFO     - default: No maskfile specified.
+08/10/24 23:50:55 - INFO     - default: Combined mask: 64663 spaxels are rejected.
+08/10/24 23:50:55 - INFO     - default: Wrote mask file: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_mask.fits
+08/10/24 23:50:55 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+08/10/24 23:50:55 - INFO     - voronoi: Defining the Voronoi bins
+08/10/24 23:52:11 - INFO     - voronoi: 94 Voronoi bins generated!
+08/10/24 23:52:11 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_table.fits
+08/10/24 23:52:11 - INFO     - _prepareSpectra: Using the routine for default
+08/10/24 23:52:13 - INFO     - default: Applied spatial bins to lin-data
+08/10/24 23:52:13 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_BinSpectra_linear.fits
+08/10/24 23:53:07 - INFO     - default: Log-rebinned the spectra
+08/10/24 23:54:02 - INFO     - default: Log-rebinned the error spectra
+08/10/24 23:54:20 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_AllSpectra.fits
+08/10/24 23:54:46 - INFO     - default: Applied spatial bins to log-data
+08/10/24 23:54:47 - INFO     - default: Wrote: ./results/./UGC2369bin5-SNRcut/UGC2369bin5-SNRcut_BinSpectra.fits
+08/10/24 23:54:47 - WARNING  - _stellarKinematics: The module was turned off.
+08/10/24 23:54:47 - WARNING  - _emissionLines: The module was turned off.
+08/10/24 23:54:47 - WARNING  - _starFormationHistories: The module was turned off.
+08/10/24 23:54:47 - WARNING  - _lineStrengths: The module was turned off.
+08/10/24 23:54:48 - INFO     - MainPipeline: The GIST completed successfully.

@@ -1,0 +1,1991 @@
+08/11/24 00:19:20 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+08/11/24 00:19:20 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+08/11/24 00:19:20 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+08/11/24 00:19:20 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+08/11/24 00:19:20 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+08/11/24 00:19:20 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+08/11/24 00:19:21 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+08/11/24 00:19:36 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A, while ignoring the wavelength range affected by the LGS.
+08/11/24 00:19:36 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+08/11/24 00:19:36 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+08/11/24 00:19:36 - INFO     - _spatialMasking: Using the spatial masking routine for default
+08/11/24 00:20:02 - INFO     - default: Masking defunct spaxels: 15982 spaxels are rejected.
+08/11/24 00:20:02 - INFO     - default: Masking low signal-to-noise spaxels: 70617 spaxels are rejected.
+08/11/24 00:20:02 - INFO     - default: No maskfile specified.
+08/11/24 00:20:02 - INFO     - default: Combined mask: 79655 spaxels are rejected.
+08/11/24 00:20:02 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+08/11/24 00:20:02 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+08/11/24 00:20:02 - INFO     - voronoi: Defining the Voronoi bins
+08/11/24 00:21:11 - INFO     - voronoi: 211 Voronoi bins generated!
+08/11/24 00:21:11 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_table.fits
+08/11/24 00:21:11 - INFO     - _prepareSpectra: Using the routine for default
+08/11/24 00:21:12 - INFO     - default: Applied spatial bins to lin-data
+08/11/24 00:21:12 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+08/11/24 00:22:10 - INFO     - default: Log-rebinned the spectra
+08/11/24 00:23:07 - INFO     - default: Log-rebinned the error spectra
+08/11/24 00:23:25 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_AllSpectra.fits
+08/11/24 00:23:47 - INFO     - default: Applied spatial bins to log-data
+08/11/24 00:23:47 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+08/11/24 00:23:48 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+08/11/24 00:23:48 - INFO     - ppxf: Using full spectral library for PPXF
+08/11/24 00:23:48 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+08/11/24 00:23:50 - INFO     - xsl_lin: Prepared the stellar population templates
+08/11/24 00:23:50 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+08/11/24 00:23:50 - INFO     - ppxf: Running PPXF in parallel mode
+08/11/24 00:25:48 - INFO     - ppxf: Running PPXF on 211 spectra took 117.58s using 24 cores
+08/11/24 00:25:48 - INFO     - ppxf: There were no problems in the analysis.
+08/11/24 00:25:48 - INFO     - ppxf: Calculating Lambda_R
+08/11/24 00:25:48 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+08/11/24 00:25:48 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin.fits
+08/11/24 00:25:48 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-bestfit.fits
+08/11/24 00:25:48 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-optimalTemplates.fits
+08/11/24 00:25:59 - INFO     - _plotting: Produced stellar kinematics maps
+08/11/24 00:25:59 - WARNING  - _emissionLines: The module was turned off.
+08/11/24 00:25:59 - WARNING  - _starFormationHistories: The module was turned off.
+08/11/24 00:25:59 - WARNING  - _lineStrengths: The module was turned off.
+08/11/24 00:26:00 - INFO     - MainPipeline: The GIST completed successfully.
+09/02/24 14:14:48 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+09/02/24 14:14:48 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+09/02/24 14:14:48 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+09/02/24 14:14:48 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+09/02/24 14:14:48 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+09/02/24 14:14:48 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+09/02/24 14:14:53 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+09/02/24 14:15:07 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A, while ignoring the wavelength range affected by the LGS.
+09/02/24 14:15:08 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+09/02/24 14:15:08 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+09/02/24 14:15:08 - INFO     - _spatialMasking: Using the spatial masking routine for default
+09/02/24 14:15:33 - INFO     - default: Masking defunct spaxels: 15982 spaxels are rejected.
+09/02/24 14:15:33 - INFO     - default: Masking low signal-to-noise spaxels: 70617 spaxels are rejected.
+09/02/24 14:15:33 - INFO     - default: No maskfile specified.
+09/02/24 14:15:33 - INFO     - default: Combined mask: 79655 spaxels are rejected.
+09/02/24 14:15:34 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+09/02/24 14:15:34 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+09/02/24 14:15:34 - INFO     - voronoi: Defining the Voronoi bins
+09/02/24 14:16:36 - INFO     - voronoi: 211 Voronoi bins generated!
+09/02/24 14:16:36 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_table.fits
+09/02/24 14:16:36 - INFO     - _prepareSpectra: Using the routine for default
+09/02/24 14:16:38 - INFO     - default: Applied spatial bins to lin-data
+09/02/24 14:16:38 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+09/02/24 14:17:33 - INFO     - default: Log-rebinned the spectra
+09/02/24 14:18:28 - INFO     - default: Log-rebinned the error spectra
+09/02/24 14:18:53 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_AllSpectra.fits
+09/02/24 14:19:26 - INFO     - default: Applied spatial bins to log-data
+09/02/24 14:19:26 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+09/02/24 14:19:27 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+09/02/24 14:19:27 - INFO     - ppxf: Using full spectral library for PPXF
+09/02/24 14:19:27 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+09/02/24 14:19:29 - INFO     - xsl_lin: Prepared the stellar population templates
+09/02/24 14:19:29 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+09/02/24 14:19:29 - INFO     - ppxf: Running PPXF in parallel mode
+09/02/24 14:21:28 - INFO     - ppxf: Running PPXF on 211 spectra took 118.73s using 24 cores
+09/02/24 14:21:28 - INFO     - ppxf: There were no problems in the analysis.
+09/02/24 14:21:28 - INFO     - ppxf: Calculating Lambda_R
+09/02/24 14:21:28 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+09/02/24 14:21:28 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin.fits
+09/02/24 14:21:28 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-bestfit.fits
+09/02/24 14:21:28 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-optimalTemplates.fits
+09/02/24 14:21:38 - INFO     - _plotting: Produced stellar kinematics maps
+09/02/24 14:21:38 - WARNING  - _emissionLines: The module was turned off.
+09/02/24 14:21:38 - CRITICAL - _starFormationHistories: must be str, not bool
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/starFormationHistories/_starFormationHistories.py", line 36, in starFormationHistories_Module
+    spec = importlib.util.spec_from_file_location("",os.path.dirname(os.path.realpath(__file__))+"/"+config['SFH']['METHOD']+'.py')
+TypeError: must be str, not bool
+09/02/24 14:21:38 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/starFormationHistories/_starFormationHistories.py", line 36, in starFormationHistories_Module
+    spec = importlib.util.spec_from_file_location("",os.path.dirname(os.path.realpath(__file__))+"/"+config['SFH']['METHOD']+'.py')
+TypeError: must be str, not bool
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 8, in <module>
+    sys.exit(main())
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/MainPipeline.py", line 146, in runGIST
+    _ = _starFormationHistories.starFormationHistories_Module(config)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/starFormationHistories/_starFormationHistories.py", line 42, in starFormationHistories_Module
+    message = "Failed to import the starFormationHistories routine '"+config['SFH']['METHOD']+".py'"
+TypeError: must be str, not bool
+09/02/24 14:23:45 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+09/02/24 14:23:45 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+09/02/24 14:23:45 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+09/02/24 14:23:45 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+09/02/24 14:23:45 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+09/02/24 14:23:45 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+09/02/24 14:23:53 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+09/02/24 14:24:07 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A, while ignoring the wavelength range affected by the LGS.
+09/02/24 14:24:07 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+09/02/24 14:24:07 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+09/02/24 14:24:07 - INFO     - _spatialMasking: Using the spatial masking routine for default
+09/02/24 14:24:32 - INFO     - default: Masking defunct spaxels: 15982 spaxels are rejected.
+09/02/24 14:24:32 - INFO     - default: Masking low signal-to-noise spaxels: 70617 spaxels are rejected.
+09/02/24 14:24:32 - INFO     - default: No maskfile specified.
+09/02/24 14:24:32 - INFO     - default: Combined mask: 79655 spaxels are rejected.
+09/02/24 14:24:32 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+09/02/24 14:24:32 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+09/02/24 14:24:32 - INFO     - voronoi: Defining the Voronoi bins
+09/02/24 14:25:36 - INFO     - voronoi: 211 Voronoi bins generated!
+09/02/24 14:25:36 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_table.fits
+09/02/24 14:25:36 - INFO     - _prepareSpectra: Using the routine for default
+09/02/24 14:25:38 - INFO     - default: Applied spatial bins to lin-data
+09/02/24 14:25:38 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+09/02/24 14:26:33 - INFO     - default: Log-rebinned the spectra
+09/02/24 14:27:29 - INFO     - default: Log-rebinned the error spectra
+09/02/24 14:27:48 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_AllSpectra.fits
+09/02/24 14:27:59 - INFO     - default: Applied spatial bins to log-data
+09/02/24 14:27:59 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+09/02/24 14:28:00 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+09/02/24 14:28:00 - INFO     - ppxf: Using full spectral library for PPXF
+09/02/24 14:28:00 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+09/02/24 14:28:02 - INFO     - xsl_lin: Prepared the stellar population templates
+09/02/24 14:28:02 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+09/02/24 14:28:02 - INFO     - ppxf: Running PPXF in parallel mode
+09/02/24 14:30:01 - INFO     - ppxf: Running PPXF on 211 spectra took 118.41s using 24 cores
+09/02/24 14:30:01 - INFO     - ppxf: There were no problems in the analysis.
+09/02/24 14:30:01 - INFO     - ppxf: Calculating Lambda_R
+09/02/24 14:30:01 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+09/02/24 14:30:01 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin.fits
+09/02/24 14:30:01 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-bestfit.fits
+09/02/24 14:30:01 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-optimalTemplates.fits
+09/02/24 14:30:10 - INFO     - _plotting: Produced stellar kinematics maps
+09/02/24 14:30:10 - WARNING  - _emissionLines: The module was turned off.
+09/02/24 14:30:10 - INFO     - _starFormationHistories: Using the starFormationHistories routine 'ppxf.py'
+09/02/24 14:30:10 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+09/02/24 14:30:21 - INFO     - xsl_lin: Prepared the stellar population templates
+09/02/24 14:30:21 - INFO     - ppxf: Using regular spectra without any emission-correction at ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+09/02/24 14:30:21 - INFO     - ppxf: Stellar kinematics are FIXED to the results obtained before.
+09/02/24 14:30:22 - INFO     - ppxf: Running PPXF in parallel mode
+09/02/24 14:33:35 - INFO     - ppxf: Running PPXF on 211 spectra took 193.67s using 24 cores
+09/02/24 14:33:35 - INFO     - ppxf: There were no problems in the analysis.
+09/02/24 14:33:35 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh.fits
+09/02/24 14:33:35 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-weights.fits
+09/02/24 14:33:35 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-bestfit.fits
+09/02/24 14:33:38 - INFO     - _plotting: Produced SFH maps
+09/02/24 14:33:38 - WARNING  - _lineStrengths: The module was turned off.
+09/02/24 14:33:40 - INFO     - MainPipeline: The GIST completed successfully.
+12/21/24 08:43:31 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 08:43:31 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/21/24 08:43:34 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 08:43:34 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/21/24 08:43:34 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/21/24 08:43:34 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 08:43:38 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+12/21/24 08:43:52 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A, while ignoring the wavelength range affected by the LGS.
+12/21/24 08:43:52 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+12/21/24 08:43:52 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 08:43:52 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 08:44:17 - INFO     - default: Masking defunct spaxels: 119368 spaxels are rejected.
+12/21/24 08:44:17 - INFO     - default: Masking low signal-to-noise spaxels: 70591 spaxels are rejected.
+12/21/24 08:44:17 - INFO     - default: No maskfile specified.
+12/21/24 08:44:17 - INFO     - default: Combined mask: 119368 spaxels are rejected.
+12/21/24 08:44:17 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/21/24 08:44:17 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/21/24 08:44:17 - INFO     - voronoi: Defining the Voronoi bins
+12/21/24 08:44:17 - ERROR    - voronoi: Defining the Voronoi bins failed. The Voronoi-binning routine of Cappellari & Copin (2003) returned the following error: 
+zero-size array to reduction operation minimum which has no identity
+12/21/24 08:44:17 - INFO     - _prepareSpectra: Using the routine for default
+12/21/24 08:44:17 - INFO     - default: Applied spatial bins to lin-data
+12/21/24 08:44:17 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/21/24 08:45:08 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 56, in log_rebinning
+    (cube['spec'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/21/24 09:03:03 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 09:03:03 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/21/24 09:03:03 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 09:03:03 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/21/24 09:03:03 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/21/24 09:03:03 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 09:03:04 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4800A to 8800A.
+12/21/24 09:03:18 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A, while ignoring the wavelength range affected by the LGS.
+12/21/24 09:03:18 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+12/21/24 09:03:18 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 09:03:18 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 09:03:42 - INFO     - default: Masking defunct spaxels: 15982 spaxels are rejected.
+12/21/24 09:03:42 - INFO     - default: Masking low signal-to-noise spaxels: 70617 spaxels are rejected.
+12/21/24 09:03:42 - INFO     - default: No maskfile specified.
+12/21/24 09:03:42 - INFO     - default: Combined mask: 79655 spaxels are rejected.
+12/21/24 09:03:42 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/21/24 09:03:42 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/21/24 09:03:42 - INFO     - voronoi: Defining the Voronoi bins
+12/21/24 09:04:44 - INFO     - voronoi: 211 Voronoi bins generated!
+12/21/24 09:04:44 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_table.fits
+12/21/24 09:04:45 - INFO     - _prepareSpectra: Using the routine for default
+12/21/24 09:04:46 - INFO     - default: Applied spatial bins to lin-data
+12/21/24 09:04:46 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/21/24 09:05:20 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 56, in log_rebinning
+    (cube['spec'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/21/24 09:08:50 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 09:08:50 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/21/24 09:08:50 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 09:08:50 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/21/24 09:08:50 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/21/24 09:08:50 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 09:08:53 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 09:09:08 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A, while ignoring the wavelength range affected by the LGS.
+12/21/24 09:09:08 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+12/21/24 09:09:08 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 09:09:08 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 09:09:37 - INFO     - default: Masking defunct spaxels: 119368 spaxels are rejected.
+12/21/24 09:09:37 - INFO     - default: Masking low signal-to-noise spaxels: 70591 spaxels are rejected.
+12/21/24 09:09:37 - INFO     - default: No maskfile specified.
+12/21/24 09:09:37 - INFO     - default: Combined mask: 119368 spaxels are rejected.
+12/21/24 09:09:37 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/21/24 09:09:37 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/21/24 09:09:37 - INFO     - voronoi: Defining the Voronoi bins
+12/21/24 09:09:37 - ERROR    - voronoi: Defining the Voronoi bins failed. The Voronoi-binning routine of Cappellari & Copin (2003) returned the following error: 
+zero-size array to reduction operation minimum which has no identity
+12/21/24 09:09:37 - INFO     - _prepareSpectra: Using the routine for default
+12/21/24 09:09:37 - INFO     - default: Applied spatial bins to lin-data
+12/21/24 09:09:37 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/21/24 09:10:00 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 56, in log_rebinning
+    (cube['spec'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/21/24 09:12:47 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 09:12:47 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/21/24 09:12:47 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 09:12:47 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/21/24 09:12:47 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/21/24 09:12:47 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 09:12:48 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 09:13:02 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A, while ignoring the wavelength range affected by the LGS.
+12/21/24 09:13:02 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+12/21/24 09:13:02 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 09:13:02 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 09:13:30 - INFO     - default: Masking defunct spaxels: 119368 spaxels are rejected.
+12/21/24 09:13:30 - INFO     - default: Masking low signal-to-noise spaxels: 68304 spaxels are rejected.
+12/21/24 09:13:30 - INFO     - default: No maskfile specified.
+12/21/24 09:13:30 - INFO     - default: Combined mask: 119368 spaxels are rejected.
+12/21/24 09:13:30 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/21/24 09:13:30 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/21/24 09:13:30 - INFO     - voronoi: Defining the Voronoi bins
+12/21/24 09:13:30 - ERROR    - voronoi: Defining the Voronoi bins failed. The Voronoi-binning routine of Cappellari & Copin (2003) returned the following error: 
+zero-size array to reduction operation minimum which has no identity
+12/21/24 09:13:30 - INFO     - _prepareSpectra: Using the routine for default
+12/21/24 09:13:30 - INFO     - default: Applied spatial bins to lin-data
+12/21/24 09:13:30 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/21/24 09:13:40 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 56, in log_rebinning
+    (cube['spec'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/21/24 22:11:44 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 22:11:44 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/21/24 22:11:45 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 22:11:45 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/21/24 22:11:45 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/21/24 22:11:45 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 22:11:46 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 22:12:01 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A, while ignoring the wavelength range affected by the LGS.
+12/21/24 22:12:01 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+12/21/24 22:12:01 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 22:12:01 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 22:12:32 - INFO     - default: Masking defunct spaxels: 119368 spaxels are rejected.
+12/21/24 22:12:32 - INFO     - default: Masking low signal-to-noise spaxels: 68304 spaxels are rejected.
+12/21/24 22:12:32 - INFO     - default: No maskfile specified.
+12/21/24 22:12:32 - INFO     - default: Combined mask: 119368 spaxels are rejected.
+12/21/24 22:12:32 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/21/24 22:12:32 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/21/24 22:12:32 - INFO     - voronoi: Defining the Voronoi bins
+12/21/24 22:12:32 - ERROR    - voronoi: Defining the Voronoi bins failed. The Voronoi-binning routine of Cappellari & Copin (2003) returned the following error: 
+zero-size array to reduction operation minimum which has no identity
+12/21/24 22:12:32 - ERROR    - voronoi: 
+12/21/24 22:12:32 - INFO     - _prepareSpectra: Using the routine for default
+12/21/24 22:12:32 - INFO     - default: Applied spatial bins to lin-data
+12/21/24 22:12:33 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/21/24 22:13:33 - INFO     - default: Log-rebinned the spectra
+12/21/24 22:14:02 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 63, in log_rebinning
+    (cube['error'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/21/24 23:44:34 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 23:44:34 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/21/24 23:44:34 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 23:44:34 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/21/24 23:44:34 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/21/24 23:44:34 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 23:44:35 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 23:44:50 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A, while ignoring the wavelength range affected by the LGS.
+12/21/24 23:44:50 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+12/21/24 23:44:50 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 23:44:50 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 23:45:18 - INFO     - default: Masking defunct spaxels: 119368 spaxels are rejected.
+12/21/24 23:45:18 - INFO     - default: Masking low signal-to-noise spaxels: 68304 spaxels are rejected.
+12/21/24 23:45:18 - INFO     - default: No maskfile specified.
+12/21/24 23:45:18 - INFO     - default: Combined mask: 119368 spaxels are rejected.
+12/21/24 23:45:18 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/21/24 23:45:18 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/21/24 23:45:18 - INFO     - voronoi: Defining the Voronoi bins
+12/21/24 23:45:18 - ERROR    - voronoi: Defining the Voronoi bins failed. The Voronoi-binning routine of Cappellari & Copin (2003) returned the following error: 
+zero-size array to reduction operation minimum which has no identity
+12/21/24 23:45:18 - ERROR    - voronoi: 
+12/21/24 23:45:18 - INFO     - _prepareSpectra: Using the routine for default
+12/21/24 23:45:18 - INFO     - default: Applied spatial bins to lin-data
+12/21/24 23:45:18 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/21/24 23:46:16 - INFO     - default: Log-rebinned the spectra
+12/21/24 23:46:55 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 63, in log_rebinning
+    (cube['error'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/21/24 23:48:32 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 23:48:32 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/21/24 23:48:32 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 23:48:32 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/21/24 23:48:32 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/21/24 23:48:32 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 23:48:33 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 23:48:47 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 98, in runGIST
+    cube = _readData.readData_Module(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/MUSE_NFMAO.py", line 100, in readCube
+    noise  = np.abs(np.nanmedian(np.sqrt(espec[idx_snr,:]),axis=0))
+  File "<__array_function__ internals>", line 6, in nanmedian
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 1114, in nanmedian
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 993, in _nanmedian
+    result = np.apply_along_axis(_nanmedian1d, axis, a, overwrite_input)
+  File "<__array_function__ internals>", line 6, in apply_along_axis
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/shape_base.py", line 401, in apply_along_axis
+    for ind in inds:
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/shape_base.py", line 370, in <genexpr>
+    inds = (ind + (Ellipsis,) for ind in inds)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/index_tricks.py", line 666, in __next__
+    return self._it.multi_index
+KeyboardInterrupt
+12/21/24 23:49:08 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 23:49:08 - INFO     - _readData: Using the read-in routine for MUSE_NFM
+12/21/24 23:49:08 - INFO     - MUSE_NFM: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 23:49:08 - INFO     - MUSE_NFM: Reading the error spectra from the cube
+12/21/24 23:49:08 - INFO     - MUSE_NFM: Extracting spatial information:
+                                         * Spatial coordinates are centred to [172.0, 172.0]
+                                         * Spatial pixelsize is 0.025419999999999995
+12/21/24 23:49:08 - INFO     - MUSE_NFM: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 23:49:09 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:49:10 - INFO     - MUSE_NFM: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 23:49:24 - INFO     - MUSE_NFM: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A.
+12/21/24 23:49:24 - INFO     - MUSE_NFM: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 23:49:24 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 23:49:37 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 105, in runGIST
+    _ = _spatialMasking.spatialMasking_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/_spatialMasking.py", line 44, in spatialMasking_Module
+    module.generateSpatialMask(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/default.py", line 19, in generateSpatialMask
+    maskedDefunct = maskDefunctSpaxels(cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/default.py", line 47, in maskDefunctSpaxels
+    good_mask = (np.any(np.isnan(cube['spec']) == False, axis=0)) * (np.nanmedian(cube['spec'], axis=0) >  0.0) * (cube['snr'] > 0.0)
+  File "<__array_function__ internals>", line 6, in nanmedian
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 1114, in nanmedian
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 993, in _nanmedian
+    result = np.apply_along_axis(_nanmedian1d, axis, a, overwrite_input)
+  File "<__array_function__ internals>", line 6, in apply_along_axis
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/shape_base.py", line 402, in apply_along_axis
+    buff[ind] = asanyarray(func1d(inarr_view[ind], *args, **kwargs))
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 966, in _nanmedian1d
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 164, in _remove_nan_1d
+    c = np.isnan(arr1d)
+KeyboardInterrupt
+12/21/24 23:50:11 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 23:50:11 - INFO     - _readData: Using the read-in routine for MUSE_NFM
+12/21/24 23:50:12 - INFO     - MUSE_NFM: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 23:50:12 - INFO     - MUSE_NFM: Reading the error spectra from the cube
+12/21/24 23:50:12 - INFO     - MUSE_NFM: Extracting spatial information:
+                                         * Spatial coordinates are centred to [172.0, 172.0]
+                                         * Spatial pixelsize is 0.025419999999999995
+12/21/24 23:50:12 - INFO     - MUSE_NFM: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 23:50:12 - INFO     - MUSE_NFM: [   0    1    2 ... 3679 3680 3681]
+12/21/24 23:50:12 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:50:12 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:50:14 - INFO     - MUSE_NFM: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 23:50:27 - INFO     - MUSE_NFM: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A.
+12/21/24 23:50:27 - INFO     - MUSE_NFM: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 23:50:27 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 23:50:56 - INFO     - default: Masking defunct spaxels: 119368 spaxels are rejected.
+12/21/24 23:50:56 - INFO     - default: Masking low signal-to-noise spaxels: 68304 spaxels are rejected.
+12/21/24 23:50:56 - INFO     - default: No maskfile specified.
+12/21/24 23:50:56 - INFO     - default: Combined mask: 119368 spaxels are rejected.
+12/21/24 23:50:56 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/21/24 23:50:56 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/21/24 23:50:56 - INFO     - voronoi: Defining the Voronoi bins
+12/21/24 23:50:56 - ERROR    - voronoi: Defining the Voronoi bins failed. The Voronoi-binning routine of Cappellari & Copin (2003) returned the following error: 
+zero-size array to reduction operation minimum which has no identity
+12/21/24 23:50:56 - ERROR    - voronoi: 
+12/21/24 23:50:56 - INFO     - _prepareSpectra: Using the routine for default
+12/21/24 23:50:56 - INFO     - default: Applied spatial bins to lin-data
+12/21/24 23:50:56 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/21/24 23:51:07 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 56, in log_rebinning
+    (cube['spec'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/21/24 23:52:35 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 23:52:35 - INFO     - _readData: Using the read-in routine for MUSE_NFM
+12/21/24 23:52:35 - INFO     - MUSE_NFM: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 23:52:36 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:52:36 - INFO     - MUSE_NFM: Reading the error spectra from the cube
+12/21/24 23:52:36 - INFO     - MUSE_NFM: Extracting spatial information:
+                                         * Spatial coordinates are centred to [172.0, 172.0]
+                                         * Spatial pixelsize is 0.025419999999999995
+12/21/24 23:52:36 - INFO     - MUSE_NFM: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 23:52:36 - INFO     - MUSE_NFM: [   0    1    2 ... 3679 3680 3681]
+12/21/24 23:52:36 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:52:36 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:52:37 - INFO     - MUSE_NFM: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 23:52:51 - INFO     - MUSE_NFM: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A.
+12/21/24 23:52:51 - INFO     - MUSE_NFM: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 23:52:51 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 23:52:52 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 105, in runGIST
+    _ = _spatialMasking.spatialMasking_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/_spatialMasking.py", line 44, in spatialMasking_Module
+    module.generateSpatialMask(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/default.py", line 19, in generateSpatialMask
+    maskedDefunct = maskDefunctSpaxels(cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/default.py", line 47, in maskDefunctSpaxels
+    good_mask = (np.any(np.isnan(cube['spec']) == False, axis=0)) * (np.nanmedian(cube['spec'], axis=0) >  0.0) * (cube['snr'] > 0.0)
+  File "<__array_function__ internals>", line 6, in nanmedian
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 1114, in nanmedian
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 993, in _nanmedian
+    result = np.apply_along_axis(_nanmedian1d, axis, a, overwrite_input)
+  File "<__array_function__ internals>", line 6, in apply_along_axis
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/shape_base.py", line 402, in apply_along_axis
+    buff[ind] = asanyarray(func1d(inarr_view[ind], *args, **kwargs))
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 970, in _nanmedian1d
+    return np.median(arr1d, overwrite_input=overwrite_input)
+  File "<__array_function__ internals>", line 6, in median
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3521, in median
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3576, in _median
+    return np.lib.utils._median_nancheck(part, rout, axis, out)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/utils.py", line 1033, in _median_nancheck
+    n = np.isnan(data[..., -1])
+KeyboardInterrupt
+12/21/24 23:53:06 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 23:53:06 - INFO     - _readData: Using the read-in routine for MUSE_NFM
+12/21/24 23:53:07 - INFO     - MUSE_NFM: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 23:53:08 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:53:08 - INFO     - MUSE_NFM: Reading the error spectra from the cube
+12/21/24 23:53:08 - INFO     - MUSE_NFM: Extracting spatial information:
+                                         * Spatial coordinates are centred to [172.0, 172.0]
+                                         * Spatial pixelsize is 0.025419999999999995
+12/21/24 23:53:08 - INFO     - MUSE_NFM: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 23:53:08 - INFO     - MUSE_NFM: [   0    1    2 ... 3679 3680 3681]
+12/21/24 23:53:08 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:53:08 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:53:09 - INFO     - MUSE_NFM: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 23:53:24 - INFO     - MUSE_NFM: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A.
+12/21/24 23:53:24 - INFO     - MUSE_NFM: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 23:53:24 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 23:53:53 - INFO     - default: Masking defunct spaxels: 119368 spaxels are rejected.
+12/21/24 23:53:53 - INFO     - default: Masking low signal-to-noise spaxels: 68259 spaxels are rejected.
+12/21/24 23:53:53 - INFO     - default: No maskfile specified.
+12/21/24 23:53:53 - INFO     - default: Combined mask: 119368 spaxels are rejected.
+12/21/24 23:53:53 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/21/24 23:53:53 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/21/24 23:53:53 - INFO     - voronoi: Defining the Voronoi bins
+12/21/24 23:53:53 - ERROR    - voronoi: Defining the Voronoi bins failed. The Voronoi-binning routine of Cappellari & Copin (2003) returned the following error: 
+zero-size array to reduction operation minimum which has no identity
+12/21/24 23:53:53 - ERROR    - voronoi: 
+12/21/24 23:53:53 - INFO     - _prepareSpectra: Using the routine for default
+12/21/24 23:53:53 - INFO     - default: Applied spatial bins to lin-data
+12/21/24 23:53:53 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/21/24 23:53:58 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 56, in log_rebinning
+    (cube['spec'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/21/24 23:54:40 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 23:54:40 - INFO     - _readData: Using the read-in routine for MUSE_NFM
+12/21/24 23:54:40 - INFO     - MUSE_NFM: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 23:54:41 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:54:41 - INFO     - MUSE_NFM: Reading the error spectra from the cube
+12/21/24 23:54:41 - INFO     - MUSE_NFM: Extracting spatial information:
+                                         * Spatial coordinates are centred to [172.0, 172.0]
+                                         * Spatial pixelsize is 0.025419999999999995
+12/21/24 23:54:41 - INFO     - MUSE_NFM: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 23:54:41 - INFO     - MUSE_NFM: [   0    1    2 ... 3679 3680 3681]
+12/21/24 23:54:41 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:54:42 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:54:43 - INFO     - MUSE_NFM: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 23:54:57 - INFO     - MUSE_NFM: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A.
+12/21/24 23:54:57 - INFO     - MUSE_NFM: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 23:54:57 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 23:55:24 - INFO     - default: Masking defunct spaxels: 119368 spaxels are rejected.
+12/21/24 23:55:24 - INFO     - default: Masking low signal-to-noise spaxels: 68259 spaxels are rejected.
+12/21/24 23:55:24 - INFO     - default: No maskfile specified.
+12/21/24 23:55:24 - INFO     - default: Combined mask: 119368 spaxels are rejected.
+12/21/24 23:55:24 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/21/24 23:55:24 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/21/24 23:55:24 - INFO     - voronoi: Defining the Voronoi bins
+12/21/24 23:55:24 - ERROR    - voronoi: Defining the Voronoi bins failed. The Voronoi-binning routine of Cappellari & Copin (2003) returned the following error: 
+zero-size array to reduction operation minimum which has no identity
+12/21/24 23:55:24 - ERROR    - voronoi: 
+12/21/24 23:55:24 - INFO     - _prepareSpectra: Using the routine for default
+12/21/24 23:55:24 - INFO     - default: Applied spatial bins to lin-data
+12/21/24 23:55:24 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/21/24 23:55:52 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 56, in log_rebinning
+    (cube['spec'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/21/24 23:56:38 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 23:56:38 - INFO     - _readData: Using the read-in routine for MUSE_NFM
+12/21/24 23:56:38 - INFO     - MUSE_NFM: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 23:56:38 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:56:38 - INFO     - MUSE_NFM: Reading the error spectra from the cube
+12/21/24 23:56:38 - INFO     - MUSE_NFM: Extracting spatial information:
+                                         * Spatial coordinates are centred to [172.0, 172.0]
+                                         * Spatial pixelsize is 0.025419999999999995
+12/21/24 23:56:38 - INFO     - MUSE_NFM: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 23:56:38 - INFO     - MUSE_NFM: [   0    1    2 ... 3679 3680 3681]
+12/21/24 23:56:38 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:56:39 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:56:40 - INFO     - MUSE_NFM: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 23:56:54 - INFO     - MUSE_NFM: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A.
+12/21/24 23:56:54 - INFO     - MUSE_NFM: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 23:56:54 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 23:57:16 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 105, in runGIST
+    _ = _spatialMasking.spatialMasking_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/_spatialMasking.py", line 44, in spatialMasking_Module
+    module.generateSpatialMask(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/default.py", line 19, in generateSpatialMask
+    maskedDefunct = maskDefunctSpaxels(cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/default.py", line 50, in maskDefunctSpaxels
+    bad_mask = (np.any(np.isnan(cube['spec']) == True,  axis=0)) | (np.nanmedian(cube['spec'], axis=0) <= 0.0) | (cube['snr'] <= 0.0)
+  File "<__array_function__ internals>", line 6, in nanmedian
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 1114, in nanmedian
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 993, in _nanmedian
+    result = np.apply_along_axis(_nanmedian1d, axis, a, overwrite_input)
+  File "<__array_function__ internals>", line 6, in apply_along_axis
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/shape_base.py", line 402, in apply_along_axis
+    buff[ind] = asanyarray(func1d(inarr_view[ind], *args, **kwargs))
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 970, in _nanmedian1d
+    return np.median(arr1d, overwrite_input=overwrite_input)
+  File "<__array_function__ internals>", line 6, in median
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3521, in median
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3550, in _median
+    part.partition(kth)
+KeyboardInterrupt
+12/21/24 23:58:28 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 23:58:28 - INFO     - _readData: Using the read-in routine for MUSE_NFM
+12/21/24 23:58:28 - INFO     - MUSE_NFM: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 23:58:29 - INFO     - MUSE_NFM: [ True  True  True ...  True  True  True]
+12/21/24 23:58:29 - INFO     - MUSE_NFM: Reading the error spectra from the cube
+12/21/24 23:58:29 - INFO     - MUSE_NFM: Extracting spatial information:
+                                         * Spatial coordinates are centred to [172.0, 172.0]
+                                         * Spatial pixelsize is 0.025419999999999995
+12/21/24 23:58:29 - INFO     - MUSE_NFM: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 23:58:29 - INFO     - MUSE_NFM: [   0    1    2 ... 3679 3680 3681]
+12/21/24 23:58:29 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:58:30 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:58:31 - INFO     - MUSE_NFM: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 23:58:45 - INFO     - MUSE_NFM: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A.
+12/21/24 23:58:45 - INFO     - MUSE_NFM: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/21/24 23:58:46 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/21/24 23:58:53 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 105, in runGIST
+    _ = _spatialMasking.spatialMasking_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/_spatialMasking.py", line 44, in spatialMasking_Module
+    module.generateSpatialMask(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/default.py", line 19, in generateSpatialMask
+    maskedDefunct = maskDefunctSpaxels(cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/default.py", line 47, in maskDefunctSpaxels
+    good_mask = (np.any(np.isnan(cube['spec']) == False, axis=0)) * (np.nanmedian(cube['spec'], axis=0) >  0.0) * (cube['snr'] > 0.0)
+  File "<__array_function__ internals>", line 6, in nanmedian
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 1114, in nanmedian
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 993, in _nanmedian
+    result = np.apply_along_axis(_nanmedian1d, axis, a, overwrite_input)
+  File "<__array_function__ internals>", line 6, in apply_along_axis
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/shape_base.py", line 402, in apply_along_axis
+    buff[ind] = asanyarray(func1d(inarr_view[ind], *args, **kwargs))
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 970, in _nanmedian1d
+    return np.median(arr1d, overwrite_input=overwrite_input)
+  File "<__array_function__ internals>", line 6, in median
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3521, in median
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3550, in _median
+    part.partition(kth)
+KeyboardInterrupt
+12/21/24 23:59:31 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/21/24 23:59:31 - INFO     - _readData: Using the read-in routine for MUSE_NFM
+12/21/24 23:59:31 - INFO     - MUSE_NFM: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/21/24 23:59:33 - INFO     - MUSE_NFM: [ True  True  True ...  True  True  True]
+12/21/24 23:59:33 - INFO     - MUSE_NFM: Reading the error spectra from the cube
+12/21/24 23:59:33 - INFO     - MUSE_NFM: Extracting spatial information:
+                                         * Spatial coordinates are centred to [172.0, 172.0]
+                                         * Spatial pixelsize is 0.025419999999999995
+12/21/24 23:59:33 - INFO     - MUSE_NFM: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/21/24 23:59:33 - INFO     - MUSE_NFM: [   0    1    2 ... 3679 3680 3681]
+12/21/24 23:59:33 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:59:34 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/21/24 23:59:35 - INFO     - MUSE_NFM: Shortening spectra to the wavelength range from 4500A to 9200A.
+12/21/24 23:59:35 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 98, in runGIST
+    cube = _readData.readData_Module(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/MUSE_NFM.py", line 101, in readCube
+    signal  = np.nanmedian(spec[idx_snr,:],axis=0)
+  File "<__array_function__ internals>", line 6, in nanmedian
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 1114, in nanmedian
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 993, in _nanmedian
+    result = np.apply_along_axis(_nanmedian1d, axis, a, overwrite_input)
+  File "<__array_function__ internals>", line 6, in apply_along_axis
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/shape_base.py", line 402, in apply_along_axis
+    buff[ind] = asanyarray(func1d(inarr_view[ind], *args, **kwargs))
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 970, in _nanmedian1d
+    return np.median(arr1d, overwrite_input=overwrite_input)
+  File "<__array_function__ internals>", line 6, in median
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3521, in median
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3555, in _median
+    part = partition(a, kth, axis=axis)
+  File "<__array_function__ internals>", line 6, in partition
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/core/fromnumeric.py", line 748, in partition
+    a.partition(kth, axis=axis, kind=kind, order=order)
+KeyboardInterrupt
+12/22/24 00:04:38 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/22/24 00:04:38 - INFO     - _readData: Using the read-in routine for MUSE_NFM
+12/22/24 00:04:38 - INFO     - MUSE_NFM: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/22/24 00:04:40 - INFO     - MUSE_NFM: [ True  True  True ...  True  True  True]
+12/22/24 00:04:40 - INFO     - MUSE_NFM: Reading the error spectra from the cube
+12/22/24 00:04:40 - INFO     - MUSE_NFM: Extracting spatial information:
+                                         * Spatial coordinates are centred to [172.0, 172.0]
+                                         * Spatial pixelsize is 0.025419999999999995
+12/22/24 00:04:40 - INFO     - MUSE_NFM: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/22/24 00:04:40 - INFO     - MUSE_NFM: [  16   17   18 ... 3622 3623 3624]
+12/22/24 00:04:40 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/22/24 00:04:41 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/22/24 00:04:42 - INFO     - MUSE_NFM: Shortening spectra to the wavelength range from 4625A to 9000A.
+12/22/24 00:04:56 - INFO     - MUSE_NFM: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A.
+12/22/24 00:04:56 - INFO     - MUSE_NFM: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/22/24 00:04:56 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/22/24 00:05:23 - INFO     - default: Masking defunct spaxels: 119368 spaxels are rejected.
+12/22/24 00:05:23 - INFO     - default: Masking low signal-to-noise spaxels: 68259 spaxels are rejected.
+12/22/24 00:05:23 - INFO     - default: No maskfile specified.
+12/22/24 00:05:23 - INFO     - default: Combined mask: 119368 spaxels are rejected.
+12/22/24 00:05:23 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/22/24 00:05:23 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/22/24 00:05:23 - INFO     - voronoi: Defining the Voronoi bins
+12/22/24 00:05:23 - ERROR    - voronoi: Defining the Voronoi bins failed. The Voronoi-binning routine of Cappellari & Copin (2003) returned the following error: 
+zero-size array to reduction operation minimum which has no identity
+12/22/24 00:05:23 - ERROR    - voronoi: 
+12/22/24 00:05:23 - INFO     - _prepareSpectra: Using the routine for default
+12/22/24 00:05:23 - INFO     - default: Applied spatial bins to lin-data
+12/22/24 00:05:23 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/22/24 00:05:27 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 56, in log_rebinning
+    (cube['spec'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/22/24 00:05:47 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/22/24 00:05:47 - INFO     - _readData: Using the read-in routine for MUSE_NFM
+12/22/24 00:05:47 - INFO     - MUSE_NFM: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/22/24 00:05:50 - INFO     - MUSE_NFM: [ True  True  True ...  True  True  True]
+12/22/24 00:05:50 - INFO     - MUSE_NFM: Reading the error spectra from the cube
+12/22/24 00:05:50 - INFO     - MUSE_NFM: Extracting spatial information:
+                                         * Spatial coordinates are centred to [172.0, 172.0]
+                                         * Spatial pixelsize is 0.025419999999999995
+12/22/24 00:05:50 - INFO     - MUSE_NFM: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/22/24 00:05:50 - INFO     - MUSE_NFM: [ 161  162  163 ... 3622 3623 3624]
+12/22/24 00:05:50 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/22/24 00:05:50 - INFO     - MUSE_NFM: [[nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ ...
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]
+ [nan nan nan ... nan nan nan]]
+12/22/24 00:05:51 - INFO     - MUSE_NFM: Shortening spectra to the wavelength range from 4800A to 9000A.
+12/22/24 00:06:06 - INFO     - MUSE_NFM: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A.
+12/22/24 00:06:06 - INFO     - MUSE_NFM: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/22/24 00:06:06 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/22/24 00:06:34 - INFO     - default: Masking defunct spaxels: 119368 spaxels are rejected.
+12/22/24 00:06:34 - INFO     - default: Masking low signal-to-noise spaxels: 68259 spaxels are rejected.
+12/22/24 00:06:34 - INFO     - default: No maskfile specified.
+12/22/24 00:06:34 - INFO     - default: Combined mask: 119368 spaxels are rejected.
+12/22/24 00:06:34 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/22/24 00:06:34 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/22/24 00:06:34 - INFO     - voronoi: Defining the Voronoi bins
+12/22/24 00:06:34 - ERROR    - voronoi: Defining the Voronoi bins failed. The Voronoi-binning routine of Cappellari & Copin (2003) returned the following error: 
+zero-size array to reduction operation minimum which has no identity
+12/22/24 00:06:34 - ERROR    - voronoi: 
+12/22/24 00:06:34 - INFO     - _prepareSpectra: Using the routine for default
+12/22/24 00:06:34 - INFO     - default: Applied spatial bins to lin-data
+12/22/24 00:06:34 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/22/24 00:06:56 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 56, in log_rebinning
+    (cube['spec'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/22/24 00:08:07 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/22/24 00:08:07 - INFO     - _readData: Using the read-in routine for MUSE_NFM
+12/22/24 00:08:07 - INFO     - MUSE_NFM: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/22/24 00:08:07 - INFO     - MUSE_NFM: Reading the error spectra from the cube
+12/22/24 00:08:07 - INFO     - MUSE_NFM: Extracting spatial information:
+                                         * Spatial coordinates are centred to [172.0, 172.0]
+                                         * Spatial pixelsize is 0.025419999999999995
+12/22/24 00:08:07 - INFO     - MUSE_NFM: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/22/24 00:08:08 - INFO     - MUSE_NFM: Shortening spectra to the wavelength range from 4600A to 9000A.
+12/22/24 00:08:23 - INFO     - MUSE_NFM: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A.
+12/22/24 00:08:23 - INFO     - MUSE_NFM: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/22/24 00:08:23 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/22/24 00:08:51 - INFO     - default: Masking defunct spaxels: 13228 spaxels are rejected.
+12/22/24 00:08:51 - INFO     - default: Masking low signal-to-noise spaxels: 68259 spaxels are rejected.
+12/22/24 00:08:51 - INFO     - default: No maskfile specified.
+12/22/24 00:08:51 - INFO     - default: Combined mask: 76645 spaxels are rejected.
+12/22/24 00:08:51 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/22/24 00:08:51 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/22/24 00:08:51 - INFO     - voronoi: Defining the Voronoi bins
+12/22/24 00:08:51 - CRITICAL - _spatialBinning: NOISE must be positive and finite
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialBinning/_spatialBinning.py", line 44, in spatialBinning_Module
+    module.generateSpatialBins(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialBinning/voronoi.py", line 78, in generateSpatialBins
+    pixelsize=cube['pixelsize'], sn_func=sn_func_covariances )
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/vorbin/voronoi_2d_binning.py", line 565, in voronoi_2d_binning
+    'NOISE must be positive and finite'
+AssertionError: NOISE must be positive and finite
+12/22/24 00:08:51 - CRITICAL - _spatialBinning: Spatial binning routine voronoi failed.
+12/22/24 00:08:52 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/22/24 00:11:02 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/22/24 00:11:02 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/22/24 00:11:02 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/22/24 00:11:02 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/22/24 00:11:02 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/22/24 00:11:02 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/22/24 00:11:03 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4600A to 9000A.
+12/22/24 00:11:18 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A, while ignoring the wavelength range affected by the LGS.
+12/22/24 00:11:18 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+12/22/24 00:11:18 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/22/24 00:11:18 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/22/24 00:11:45 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 105, in runGIST
+    _ = _spatialMasking.spatialMasking_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/_spatialMasking.py", line 44, in spatialMasking_Module
+    module.generateSpatialMask(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/default.py", line 19, in generateSpatialMask
+    maskedDefunct = maskDefunctSpaxels(cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/spatialMasking/default.py", line 50, in maskDefunctSpaxels
+    bad_mask = (np.all(np.isnan(cube['spec']) == True,  axis=0)) | (np.nanmedian(cube['spec'], axis=0) <= 0.0) | (cube['snr'] <= 0.0)
+  File "<__array_function__ internals>", line 6, in nanmedian
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 1114, in nanmedian
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 993, in _nanmedian
+    result = np.apply_along_axis(_nanmedian1d, axis, a, overwrite_input)
+  File "<__array_function__ internals>", line 6, in apply_along_axis
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/shape_base.py", line 402, in apply_along_axis
+    buff[ind] = asanyarray(func1d(inarr_view[ind], *args, **kwargs))
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 970, in _nanmedian1d
+    return np.median(arr1d, overwrite_input=overwrite_input)
+  File "<__array_function__ internals>", line 6, in median
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3521, in median
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3550, in _median
+    part.partition(kth)
+KeyboardInterrupt
+12/22/24 00:13:50 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/22/24 00:13:50 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/22/24 00:13:50 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/22/24 00:13:50 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/22/24 00:13:50 - CRITICAL - _readData: local variable 'wave' referenced before assignment
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/MUSE_NFMAO.py", line 63, in readCube
+    idx_laser = np.where( np.logical_and( wave > 5780 / (1+config['GENERAL']['REDSHIFT']), wave < 6050 / (1+config['GENERAL']['REDSHIFT'])) )[0]
+UnboundLocalError: local variable 'wave' referenced before assignment
+12/22/24 00:13:50 - CRITICAL - _readData: Read-in routine MUSE_NFMAO failed to read ./inputData/UGC_2369_S_DATACUBE_FINAL.fits.
+12/22/24 00:13:50 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/22/24 00:14:22 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/22/24 00:14:22 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/22/24 00:14:23 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/22/24 00:14:23 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/22/24 00:14:23 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/22/24 00:14:23 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/22/24 00:14:24 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4600A to 9000A.
+12/22/24 00:14:39 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A, while ignoring the wavelength range affected by the LGS.
+12/22/24 00:14:39 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+12/22/24 00:14:39 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/22/24 00:14:39 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/22/24 00:15:08 - INFO     - default: Masking defunct spaxels: 119368 spaxels are rejected.
+12/22/24 00:15:08 - INFO     - default: Masking low signal-to-noise spaxels: 68304 spaxels are rejected.
+12/22/24 00:15:08 - INFO     - default: No maskfile specified.
+12/22/24 00:15:08 - INFO     - default: Combined mask: 119368 spaxels are rejected.
+12/22/24 00:15:08 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/22/24 00:15:08 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/22/24 00:15:08 - INFO     - voronoi: Defining the Voronoi bins
+12/22/24 00:15:08 - ERROR    - voronoi: Defining the Voronoi bins failed. The Voronoi-binning routine of Cappellari & Copin (2003) returned the following error: 
+zero-size array to reduction operation minimum which has no identity
+12/22/24 00:15:08 - ERROR    - voronoi: 
+12/22/24 00:15:08 - INFO     - _prepareSpectra: Using the routine for default
+12/22/24 00:15:08 - INFO     - default: Applied spatial bins to lin-data
+12/22/24 00:15:08 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/22/24 00:16:09 - INFO     - default: Log-rebinned the spectra
+12/22/24 00:16:15 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 63, in log_rebinning
+    (cube['error'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/22/24 00:23:13 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/22/24 00:23:13 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/22/24 00:23:14 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/22/24 00:23:14 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/22/24 00:23:14 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/22/24 00:23:14 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/22/24 00:23:15 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4600A to 9000A.
+12/22/24 00:23:15 - CRITICAL - _readData: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/MUSE_NFMAO.py", line 100, in readCube
+    np.logical_or( awave < 5780, awave > 6050) ]))[0]
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+12/22/24 00:23:15 - CRITICAL - _readData: Read-in routine MUSE_NFMAO failed to read ./inputData/UGC_2369_S_DATACUBE_FINAL.fits.
+12/22/24 00:23:15 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/22/24 00:25:30 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/22/24 00:25:30 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/22/24 00:25:30 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/22/24 00:25:30 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/22/24 00:25:30 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/22/24 00:25:30 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/22/24 00:25:31 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4600A to 9000A.
+12/22/24 00:25:46 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A, while ignoring the wavelength range affected by the LGS.
+12/22/24 00:25:46 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+12/22/24 00:25:46 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/22/24 00:25:46 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/22/24 00:26:14 - INFO     - default: Masking defunct spaxels: 18060 spaxels are rejected.
+12/22/24 00:26:14 - INFO     - default: Masking low signal-to-noise spaxels: 68304 spaxels are rejected.
+12/22/24 00:26:14 - INFO     - default: No maskfile specified.
+12/22/24 00:26:14 - INFO     - default: Combined mask: 77621 spaxels are rejected.
+12/22/24 00:26:14 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/22/24 00:26:14 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/22/24 00:26:14 - INFO     - voronoi: Defining the Voronoi bins
+12/22/24 00:27:38 - INFO     - voronoi: 191 Voronoi bins generated!
+12/22/24 00:27:38 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_table.fits
+12/22/24 00:27:38 - INFO     - _prepareSpectra: Using the routine for default
+12/22/24 00:27:40 - INFO     - default: Applied spatial bins to lin-data
+12/22/24 00:27:40 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/22/24 00:28:40 - INFO     - default: Log-rebinned the spectra
+12/22/24 00:29:41 - INFO     - default: Log-rebinned the error spectra
+12/22/24 00:30:15 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_AllSpectra.fits
+12/22/24 00:30:50 - INFO     - default: Applied spatial bins to log-data
+12/22/24 00:30:50 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+12/22/24 00:30:51 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+12/22/24 00:30:51 - INFO     - ppxf: Using full spectral library for PPXF
+12/22/24 00:30:51 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+12/22/24 00:30:53 - INFO     - xsl_lin: Prepared the stellar population templates
+12/22/24 00:30:53 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+12/22/24 00:30:53 - INFO     - ppxf: Running PPXF in parallel mode
+12/22/24 00:32:54 - INFO     - ppxf: Running PPXF on 191 spectra took 121.39s using 24 cores
+12/22/24 00:32:54 - INFO     - ppxf: There were no problems in the analysis.
+12/22/24 00:32:54 - INFO     - ppxf: Calculating Lambda_R
+12/22/24 00:32:54 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+12/22/24 00:32:55 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin.fits
+12/22/24 00:32:55 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-bestfit.fits
+12/22/24 00:32:55 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-optimalTemplates.fits
+12/22/24 00:32:58 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 18, in generatePlots
+    gistPlot_kin.plotMaps('KIN', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_kin.py", line 232, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_kin.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+12/22/24 00:32:58 - ERROR    - _plotting: Failed to produce stellar kinematics maps.
+12/22/24 00:32:58 - WARNING  - _emissionLines: The module was turned off.
+12/22/24 00:32:58 - INFO     - _starFormationHistories: Using the starFormationHistories routine 'ppxf.py'
+12/22/24 00:32:58 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+12/22/24 00:33:07 - INFO     - xsl_lin: Prepared the stellar population templates
+12/22/24 00:33:07 - INFO     - ppxf: Using regular spectra without any emission-correction at ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+12/22/24 00:33:07 - INFO     - ppxf: Stellar kinematics are FIXED to the results obtained before.
+12/22/24 00:33:07 - INFO     - ppxf: Running PPXF in parallel mode
+12/22/24 00:36:08 - INFO     - ppxf: Running PPXF on 191 spectra took 181.17s using 24 cores
+12/22/24 00:36:08 - INFO     - ppxf: There were no problems in the analysis.
+12/22/24 00:36:08 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh.fits
+12/22/24 00:36:08 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-weights.fits
+12/22/24 00:36:08 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-bestfit.fits
+12/22/24 00:36:09 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 48, in generatePlots
+    gistPlot_sfh.plotMaps('SFH', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_sfh.py", line 241, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_sfh.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+12/22/24 00:36:09 - ERROR    - _plotting: Failed to produce SFH maps.
+12/22/24 00:36:09 - WARNING  - _lineStrengths: The module was turned off.
+12/22/24 00:36:11 - INFO     - MainPipeline: The GIST completed successfully.
+12/23/24 04:21:59 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/23/24 04:21:59 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/23/24 04:21:59 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/23/24 04:21:59 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/23/24 04:21:59 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/23/24 04:21:59 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/23/24 04:22:01 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4600A to 9000A.
+12/23/24 04:22:14 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 8000A to 9000A, while ignoring the wavelength range affected by the LGS.
+12/23/24 04:22:14 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+12/23/24 04:22:14 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/23/24 04:22:14 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/23/24 04:22:40 - INFO     - default: Masking defunct spaxels: 18060 spaxels are rejected.
+12/23/24 04:22:40 - INFO     - default: Masking low signal-to-noise spaxels: 68304 spaxels are rejected.
+12/23/24 04:22:40 - INFO     - default: No maskfile specified.
+12/23/24 04:22:40 - INFO     - default: Combined mask: 77621 spaxels are rejected.
+12/23/24 04:22:40 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/23/24 04:22:40 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/23/24 04:22:40 - INFO     - voronoi: Defining the Voronoi bins
+12/23/24 04:23:58 - INFO     - voronoi: 191 Voronoi bins generated!
+12/23/24 04:23:58 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_table.fits
+12/23/24 04:23:58 - INFO     - _prepareSpectra: Using the routine for default
+12/23/24 04:24:00 - INFO     - default: Applied spatial bins to lin-data
+12/23/24 04:24:00 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/23/24 04:24:11 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 119, in runGIST
+    _ = _prepareSpectra.prepareSpectra_Module(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/_prepareSpectra.py", line 45, in prepareSpectra_Module
+    module.prepSpectra(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 37, in prepSpectra
+    log_spec, log_error, logLam = log_rebinning(config, cube)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 56, in log_rebinning
+    (cube['spec'], config['PREPARE_SPECTRA']['VELSCALE'], len(cube['x']), cube['wave'] )
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/prepareSpectra/default.py", line 83, in run_logrebinning
+    log_bin_data[:,i] = corefunc_logrebin(lamRange, bin_data[:,i], velscale, len(logLam), i, nbins)
+KeyboardInterrupt
+12/23/24 04:24:26 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/23/24 04:24:26 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/23/24 04:24:27 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/23/24 04:24:27 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/23/24 04:24:27 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/23/24 04:24:27 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/23/24 04:24:28 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4600A to 9000A.
+12/23/24 04:24:38 - ERROR    - _initialise: Uncaught Exception
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/bin/gistPipeline", line 33, in <module>
+    sys.exit(load_entry_point('gistPipeline', 'console_scripts', 'gistPipeline')())
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 206, in main
+    runGIST(dirPath, galindex)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/MainPipeline.py", line 98, in runGIST
+    cube = _readData.readData_Module(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/MUSE_NFMAO.py", line 107, in readCube
+    noise  = np.abs(np.nanmedian(np.sqrt(espec[idx_snr,:]),axis=0))
+  File "<__array_function__ internals>", line 6, in nanmedian
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 1114, in nanmedian
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 993, in _nanmedian
+    result = np.apply_along_axis(_nanmedian1d, axis, a, overwrite_input)
+  File "<__array_function__ internals>", line 6, in apply_along_axis
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/shape_base.py", line 402, in apply_along_axis
+    buff[ind] = asanyarray(func1d(inarr_view[ind], *args, **kwargs))
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/nanfunctions.py", line 970, in _nanmedian1d
+    return np.median(arr1d, overwrite_input=overwrite_input)
+  File "<__array_function__ internals>", line 6, in median
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3521, in median
+    overwrite_input=overwrite_input)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3429, in _ureduce
+    r = func(a, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/function_base.py", line 3576, in _median
+    return np.lib.utils._median_nancheck(part, rout, axis, out)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/lib/utils.py", line 1032, in _median_nancheck
+    data = np.moveaxis(data, axis, -1)
+  File "<__array_function__ internals>", line 6, in moveaxis
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/numpy/core/numeric.py", line 1428, in moveaxis
+    source = normalize_axis_tuple(source, a.ndim, 'source')
+KeyboardInterrupt
+12/23/24 04:24:48 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/23/24 04:24:48 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+12/23/24 04:24:49 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+12/23/24 04:24:49 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+12/23/24 04:24:49 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+12/23/24 04:24:49 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/23/24 04:24:50 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4600A to 9000A.
+12/23/24 04:25:04 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A, while ignoring the wavelength range affected by the LGS.
+12/23/24 04:25:04 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+12/23/24 04:25:04 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+12/23/24 04:25:04 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/23/24 04:25:30 - INFO     - default: Masking defunct spaxels: 17109 spaxels are rejected.
+12/23/24 04:25:30 - INFO     - default: Masking low signal-to-noise spaxels: 67811 spaxels are rejected.
+12/23/24 04:25:30 - INFO     - default: No maskfile specified.
+12/23/24 04:25:30 - INFO     - default: Combined mask: 77083 spaxels are rejected.
+12/23/24 04:25:30 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/23/24 04:25:30 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/23/24 04:25:30 - INFO     - voronoi: Defining the Voronoi bins
+12/23/24 04:26:28 - INFO     - voronoi: 214 Voronoi bins generated!
+12/23/24 04:26:28 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_table.fits
+12/23/24 04:26:28 - INFO     - _prepareSpectra: Using the routine for default
+12/23/24 04:26:29 - INFO     - default: Applied spatial bins to lin-data
+12/23/24 04:26:29 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/23/24 04:27:28 - INFO     - default: Log-rebinned the spectra
+12/23/24 04:28:26 - INFO     - default: Log-rebinned the error spectra
+12/23/24 04:28:47 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_AllSpectra.fits
+12/23/24 04:29:00 - INFO     - default: Applied spatial bins to log-data
+12/23/24 04:29:00 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+12/23/24 04:29:01 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+12/23/24 04:29:01 - INFO     - ppxf: Using full spectral library for PPXF
+12/23/24 04:29:01 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+12/23/24 04:29:03 - INFO     - xsl_lin: Prepared the stellar population templates
+12/23/24 04:29:03 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+12/23/24 04:29:03 - INFO     - ppxf: Running PPXF in parallel mode
+12/23/24 04:30:56 - INFO     - ppxf: Running PPXF on 214 spectra took 112.60s using 24 cores
+12/23/24 04:30:56 - INFO     - ppxf: There were no problems in the analysis.
+12/23/24 04:30:56 - INFO     - ppxf: Calculating Lambda_R
+12/23/24 04:30:56 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+12/23/24 04:30:56 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin.fits
+12/23/24 04:30:56 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-bestfit.fits
+12/23/24 04:30:56 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-optimalTemplates.fits
+12/23/24 04:30:59 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 18, in generatePlots
+    gistPlot_kin.plotMaps('KIN', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_kin.py", line 232, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_kin.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+12/23/24 04:30:59 - ERROR    - _plotting: Failed to produce stellar kinematics maps.
+12/23/24 04:30:59 - WARNING  - _emissionLines: The module was turned off.
+12/23/24 04:30:59 - INFO     - _starFormationHistories: Using the starFormationHistories routine 'ppxf.py'
+12/23/24 04:30:59 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+12/23/24 04:31:08 - INFO     - xsl_lin: Prepared the stellar population templates
+12/23/24 04:31:08 - INFO     - ppxf: Using regular spectra without any emission-correction at ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+12/23/24 04:31:08 - INFO     - ppxf: Stellar kinematics are FIXED to the results obtained before.
+12/23/24 04:31:08 - INFO     - ppxf: Running PPXF in parallel mode
+12/23/24 04:34:44 - INFO     - ppxf: Running PPXF on 214 spectra took 216.02s using 24 cores
+12/23/24 04:34:44 - INFO     - ppxf: There were no problems in the analysis.
+12/23/24 04:34:44 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh.fits
+12/23/24 04:34:44 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-weights.fits
+12/23/24 04:34:44 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-bestfit.fits
+12/23/24 04:34:46 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 48, in generatePlots
+    gistPlot_sfh.plotMaps('SFH', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_sfh.py", line 241, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_sfh.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+12/23/24 04:34:46 - ERROR    - _plotting: Failed to produce SFH maps.
+12/23/24 04:34:46 - WARNING  - _lineStrengths: The module was turned off.
+12/23/24 04:34:47 - INFO     - MainPipeline: The GIST completed successfully.
+01/15/25 05:43:33 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+01/15/25 05:43:33 - INFO     - _readData: Using the read-in routine for MUSE_NFMAO
+01/15/25 05:43:33 - INFO     - MUSE_NFMAO: Reading the MUSE-NFM cube: ./inputData/UGC_2369_S_DATACUBE_FINAL.fits
+01/15/25 05:43:33 - INFO     - MUSE_NFMAO: Reading the error spectra from the cube
+01/15/25 05:43:33 - INFO     - MUSE_NFMAO: Extracting spatial information:
+                                           * Spatial coordinates are centred to [172.0, 172.0]
+                                           * Spatial pixelsize is 0.025419999999999995
+01/15/25 05:43:33 - INFO     - MUSE_NFMAO: Shifting spectra to rest-frame, assuming a redshift of 0.0318
+01/15/25 05:43:35 - INFO     - MUSE_NFMAO: Shortening spectra to the wavelength range from 4600A to 9000A.
+01/15/25 05:43:48 - INFO     - MUSE_NFMAO: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A, while ignoring the wavelength range affected by the LGS.
+01/15/25 05:43:48 - INFO     - MUSE_NFMAO: Replacing the spectral region affected by the LGS (5780A-6050A) with the median signal of the spectra.
+01/15/25 05:43:48 - INFO     - MUSE_NFMAO: Finished reading the MUSE cube! Read a total of 119368 spectra!
+01/15/25 05:43:49 - INFO     - _spatialMasking: Using the spatial masking routine for default
+01/15/25 05:44:14 - INFO     - default: Masking defunct spaxels: 17142 spaxels are rejected.
+01/15/25 05:44:14 - INFO     - default: Masking low signal-to-noise spaxels: 67859 spaxels are rejected.
+01/15/25 05:44:14 - INFO     - default: No maskfile specified.
+01/15/25 05:44:14 - INFO     - default: Combined mask: 77128 spaxels are rejected.
+01/15/25 05:44:14 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+01/15/25 05:44:14 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+01/15/25 05:44:14 - INFO     - voronoi: Defining the Voronoi bins
+01/15/25 05:45:37 - INFO     - voronoi: 214 Voronoi bins generated!
+01/15/25 05:45:37 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_table.fits
+01/15/25 05:45:37 - INFO     - _prepareSpectra: Using the routine for default
+01/15/25 05:45:39 - INFO     - default: Applied spatial bins to lin-data
+01/15/25 05:45:39 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+01/15/25 05:46:36 - INFO     - default: Log-rebinned the spectra
+01/15/25 05:47:34 - INFO     - default: Log-rebinned the error spectra
+01/15/25 05:47:55 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_AllSpectra.fits
+01/15/25 05:48:07 - INFO     - default: Applied spatial bins to log-data
+01/15/25 05:48:08 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+01/15/25 05:48:08 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+01/15/25 05:48:08 - INFO     - ppxf: Using full spectral library for PPXF
+01/15/25 05:48:08 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+01/15/25 05:48:10 - INFO     - xsl_lin: Prepared the stellar population templates
+01/15/25 05:48:10 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+01/15/25 05:48:10 - INFO     - ppxf: Running PPXF in parallel mode
+01/15/25 05:49:47 - INFO     - ppxf: Running PPXF on 214 spectra took 97.24s using 24 cores
+01/15/25 05:49:47 - INFO     - ppxf: There were no problems in the analysis.
+01/15/25 05:49:47 - INFO     - ppxf: Calculating Lambda_R
+01/15/25 05:49:47 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+01/15/25 05:49:48 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin.fits
+01/15/25 05:49:48 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-bestfit.fits
+01/15/25 05:49:48 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-optimalTemplates.fits
+01/15/25 05:49:51 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 18, in generatePlots
+    gistPlot_kin.plotMaps('KIN', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_kin.py", line 232, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_kin.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+01/15/25 05:49:51 - ERROR    - _plotting: Failed to produce stellar kinematics maps.
+01/15/25 05:49:51 - WARNING  - _emissionLines: The module was turned off.
+01/15/25 05:49:51 - INFO     - _starFormationHistories: Using the starFormationHistories routine 'ppxf.py'
+01/15/25 05:49:51 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+01/15/25 05:50:00 - INFO     - xsl_lin: Prepared the stellar population templates
+01/15/25 05:50:00 - INFO     - ppxf: Using regular spectra without any emission-correction at ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+01/15/25 05:50:00 - INFO     - ppxf: Stellar kinematics are FIXED to the results obtained before.
+01/15/25 05:50:00 - INFO     - ppxf: Running PPXF in parallel mode
+01/15/25 06:03:55 - INFO     - ppxf: Running PPXF on 214 spectra took 834.85s using 24 cores
+01/15/25 06:03:55 - INFO     - ppxf: There were no problems in the analysis.
+01/15/25 06:03:55 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh.fits
+01/15/25 06:03:55 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-weights.fits
+01/15/25 06:03:55 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-bestfit.fits
+01/15/25 06:03:57 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 48, in generatePlots
+    gistPlot_sfh.plotMaps('SFH', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_sfh.py", line 241, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_sfh.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+01/15/25 06:03:57 - ERROR    - _plotting: Failed to produce SFH maps.
+01/15/25 06:03:57 - WARNING  - _lineStrengths: The module was turned off.
+01/15/25 06:03:58 - INFO     - MainPipeline: The GIST completed successfully.

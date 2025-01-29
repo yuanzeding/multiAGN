@@ -1,0 +1,780 @@
+12/19/24 20:34:42 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 20:34:42 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 20:34:42 - CRITICAL - _readData: [Errno 2] No such file or directory: '/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/readData/KECK_KCWIbpr.py'
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/readData/_readData.py", line 27, in readData_Module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 674, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 780, in get_code
+  File "<frozen importlib._bootstrap_external>", line 832, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: '/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/gistPipeline/readData/KECK_KCWIbpr.py'
+12/19/24 20:34:42 - CRITICAL - _readData: Failed to import the read-in routine KECK_KCWIbpr.
+12/19/24 20:34:42 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/19/24 20:35:25 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 20:35:25 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 20:35:25 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 20:35:25 - CRITICAL - _readData: [Errno 2] No such file or directory: './inputData/UGC2369S_icube_wcs.fits'
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/KECK_KCWIbpr.py", line 41, in readCube
+    hdub   = fits.open(config['GENERAL']['INPUT']+"_icube_wcs.fits")
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 164, in fitsopen
+    lazy_load_hdus, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 402, in fromfile
+    lazy_load_hdus=lazy_load_hdus, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 1051, in _readfrom
+    fileobj = _File(fileobj, mode=mode, memmap=memmap, cache=cache)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/utils/decorators.py", line 535, in wrapper
+    return function(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/file.py", line 175, in __init__
+    self._open_filename(fileobj, mode, overwrite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/file.py", line 564, in _open_filename
+    self._file = fileobj_open(self.name, IO_FITS_MODES[mode])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/util.py", line 397, in fileobj_open
+    return open(filename, mode, buffering=0)
+FileNotFoundError: [Errno 2] No such file or directory: './inputData/UGC2369S_icube_wcs.fits'
+12/19/24 20:35:26 - CRITICAL - _readData: Read-in routine KECK_KCWIbpr failed to read ./inputData/UGC2369S.
+12/19/24 20:35:26 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/19/24 20:37:52 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 20:37:52 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 20:37:52 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 20:37:52 - CRITICAL - _readData: [Errno 2] No such file or directory: './inputData/UGC2369S-red_icubes_wcs.fits'
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/KECK_KCWIbpr.py", line 42, in readCube
+    hdur   = fits.open(config['GENERAL']['INPUT']+"-red_icubes_wcs.fits")
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 164, in fitsopen
+    lazy_load_hdus, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 402, in fromfile
+    lazy_load_hdus=lazy_load_hdus, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 1051, in _readfrom
+    fileobj = _File(fileobj, mode=mode, memmap=memmap, cache=cache)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/utils/decorators.py", line 535, in wrapper
+    return function(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/file.py", line 175, in __init__
+    self._open_filename(fileobj, mode, overwrite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/file.py", line 564, in _open_filename
+    self._file = fileobj_open(self.name, IO_FITS_MODES[mode])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/util.py", line 397, in fileobj_open
+    return open(filename, mode, buffering=0)
+FileNotFoundError: [Errno 2] No such file or directory: './inputData/UGC2369S-red_icubes_wcs.fits'
+12/19/24 20:37:52 - CRITICAL - _readData: Read-in routine KECK_KCWIbpr failed to read ./inputData/UGC2369S.
+12/19/24 20:37:52 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/19/24 20:38:34 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 20:38:34 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 20:38:34 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 20:38:34 - CRITICAL - _readData: [Errno 2] No such file or directory: './inputData/UGC2369S-red_icubes_wcs.fits'
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/KECK_KCWIbpr.py", line 43, in readCube
+    hdur   = fits.open(config['GENERAL']['INPUT']+"-red_icubes_wcs.fits")
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 164, in fitsopen
+    lazy_load_hdus, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 402, in fromfile
+    lazy_load_hdus=lazy_load_hdus, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 1051, in _readfrom
+    fileobj = _File(fileobj, mode=mode, memmap=memmap, cache=cache)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/utils/decorators.py", line 535, in wrapper
+    return function(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/file.py", line 175, in __init__
+    self._open_filename(fileobj, mode, overwrite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/file.py", line 564, in _open_filename
+    self._file = fileobj_open(self.name, IO_FITS_MODES[mode])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/util.py", line 397, in fileobj_open
+    return open(filename, mode, buffering=0)
+FileNotFoundError: [Errno 2] No such file or directory: './inputData/UGC2369S-red_icubes_wcs.fits'
+12/19/24 20:38:34 - CRITICAL - _readData: Read-in routine KECK_KCWIbpr failed to read ./inputData/UGC2369S.
+12/19/24 20:38:34 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/19/24 20:38:54 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 20:38:54 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 20:38:54 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 20:38:54 - CRITICAL - _readData: [Errno 2] No such file or directory: './inputData/UGC2369S-red_icubes_wcs.fits'
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/KECK_KCWIbpr.py", line 43, in readCube
+    hdur   = fits.open(config['GENERAL']['INPUT']+"-red_icubes_wcs.fits")
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 164, in fitsopen
+    lazy_load_hdus, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 402, in fromfile
+    lazy_load_hdus=lazy_load_hdus, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 1051, in _readfrom
+    fileobj = _File(fileobj, mode=mode, memmap=memmap, cache=cache)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/utils/decorators.py", line 535, in wrapper
+    return function(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/file.py", line 175, in __init__
+    self._open_filename(fileobj, mode, overwrite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/file.py", line 564, in _open_filename
+    self._file = fileobj_open(self.name, IO_FITS_MODES[mode])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/util.py", line 397, in fileobj_open
+    return open(filename, mode, buffering=0)
+FileNotFoundError: [Errno 2] No such file or directory: './inputData/UGC2369S-red_icubes_wcs.fits'
+12/19/24 20:38:54 - CRITICAL - _readData: Read-in routine KECK_KCWIbpr failed to read ./inputData/UGC2369S.
+12/19/24 20:38:54 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/19/24 20:39:53 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 20:39:53 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 20:39:53 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 20:39:53 - CRITICAL - _readData: [Errno 2] No such file or directory: './inputData/UGC2369S-red_icubes_wcs.fits'
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/KECK_KCWIbpr.py", line 42, in readCube
+    hdur   = fits.open(config['GENERAL']['INPUT']+"-red_icubes_wcs.fits")
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 164, in fitsopen
+    lazy_load_hdus, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 402, in fromfile
+    lazy_load_hdus=lazy_load_hdus, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/hdu/hdulist.py", line 1051, in _readfrom
+    fileobj = _File(fileobj, mode=mode, memmap=memmap, cache=cache)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/utils/decorators.py", line 535, in wrapper
+    return function(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/file.py", line 175, in __init__
+    self._open_filename(fileobj, mode, overwrite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/file.py", line 564, in _open_filename
+    self._file = fileobj_open(self.name, IO_FITS_MODES[mode])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/astropy/io/fits/util.py", line 397, in fileobj_open
+    return open(filename, mode, buffering=0)
+FileNotFoundError: [Errno 2] No such file or directory: './inputData/UGC2369S-red_icubes_wcs.fits'
+12/19/24 20:39:53 - CRITICAL - _readData: Read-in routine KECK_KCWIbpr failed to read ./inputData/UGC2369S.
+12/19/24 20:39:53 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/19/24 20:50:19 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 20:50:19 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 20:50:19 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 20:50:19 - CRITICAL - _readData: boolean index did not match indexed array along dimension 0; dimension is 6867 but corresponding boolean dimension is 5218
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/KECK_KCWIbpr.py", line 74, in readCube
+    data=np.append(hdub[0].data[wavemask_blue,:,:],hdur[0].data[wavemask_red,:,:],axis=0)
+IndexError: boolean index did not match indexed array along dimension 0; dimension is 6867 but corresponding boolean dimension is 5218
+12/19/24 20:50:19 - CRITICAL - _readData: Read-in routine KECK_KCWIbpr failed to read ./inputData/UGC2369S.
+12/19/24 20:50:19 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/19/24 21:07:06 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 21:07:06 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 21:07:06 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 21:07:06 - CRITICAL - _readData: boolean index did not match indexed array along dimension 0; dimension is 6867 but corresponding boolean dimension is 5218
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/KECK_KCWIbpr.py", line 74, in readCube
+    data=np.append(hdub[0].data[wavemask_blue,:,:],hdur[0].data[wavemask_red,:,:],axis=0)
+IndexError: boolean index did not match indexed array along dimension 0; dimension is 6867 but corresponding boolean dimension is 5218
+12/19/24 21:07:06 - CRITICAL - _readData: Read-in routine KECK_KCWIbpr failed to read ./inputData/UGC2369S.
+12/19/24 21:07:06 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/19/24 21:08:48 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 21:08:48 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 21:08:48 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 21:08:48 - CRITICAL - _readData: boolean index did not match indexed array along dimension 0; dimension is 6867 but corresponding boolean dimension is 5218
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/KECK_KCWIbpr.py", line 74, in readCube
+    data=np.append(hdub[0].data[wavemask_blue,:,:],hdur[0].data[wavemask_red,:,:],axis=0)
+IndexError: boolean index did not match indexed array along dimension 0; dimension is 6867 but corresponding boolean dimension is 5218
+12/19/24 21:08:48 - CRITICAL - _readData: Read-in routine KECK_KCWIbpr failed to read ./inputData/UGC2369S.
+12/19/24 21:08:48 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/19/24 21:11:12 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 21:11:12 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 21:11:12 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 21:11:12 - CRITICAL - _readData: must be str, not tuple
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/KECK_KCWIbpr.py", line 73, in readCube
+    printStatus.running(wavemask_red.shape)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/printStatus/printStatus.py", line 50, in running
+    sys.stdout.write("\r [ "+'\033[0;37m'+"RUNNING "+'\033[0;39m'+"] "+outputlabel)
+TypeError: must be str, not tuple
+12/19/24 21:11:12 - CRITICAL - _readData: Read-in routine KECK_KCWIbpr failed to read ./inputData/UGC2369S.
+12/19/24 21:11:12 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/19/24 21:11:40 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 21:11:40 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 21:11:40 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 21:11:40 - CRITICAL - _readData: boolean index did not match indexed array along dimension 0; dimension is 6867 but corresponding boolean dimension is 5218
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/_readData.py", line 37, in readData_Module
+    cube = module.readCube(config)
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/readData/KECK_KCWIbpr.py", line 74, in readCube
+    data=np.append(hdub[0].data[wavemask_blue,:,:],hdur[0].data[wavemask_red,:,:],axis=0)
+IndexError: boolean index did not match indexed array along dimension 0; dimension is 6867 but corresponding boolean dimension is 5218
+12/19/24 21:11:40 - CRITICAL - _readData: Read-in routine KECK_KCWIbpr failed to read ./inputData/UGC2369S.
+12/19/24 21:11:40 - CRITICAL - MainPipeline: Galaxy is skipped!
+12/19/24 21:12:16 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 21:12:16 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 21:12:16 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 21:12:17 - INFO     - KECK_KCWIbpr: Reading the error spectra from the cube
+12/19/24 21:12:17 - INFO     - KECK_KCWIbpr: Extracting spatial information:
+                                             * Spatial coordinates are centred to [34.0, 85.0]
+                                             * Spatial pixelsize is 0.1459999999999998
+12/19/24 21:12:17 - INFO     - KECK_KCWIbpr: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/19/24 21:12:18 - INFO     - KECK_KCWIbpr: Shortening spectra to the wavelength range from 3500A to 9000A.
+12/19/24 21:12:19 - INFO     - KECK_KCWIbpr: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A.
+12/19/24 21:12:19 - INFO     - KECK_KCWIbpr: Finished reading the KECK cube! Read a total of 9000 spectra!
+12/19/24 21:12:19 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/19/24 21:12:23 - INFO     - default: Masking defunct spaxels: 1480 spaxels are rejected.
+12/19/24 21:12:23 - INFO     - default: Masking low signal-to-noise spaxels: 2760 spaxels are rejected.
+12/19/24 21:12:23 - INFO     - default: No maskfile specified.
+12/19/24 21:12:23 - INFO     - default: Combined mask: 2762 spaxels are rejected.
+12/19/24 21:12:23 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/19/24 21:12:23 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/19/24 21:12:24 - INFO     - voronoi: Defining the Voronoi bins
+12/19/24 21:12:26 - INFO     - voronoi: 874 Voronoi bins generated!
+12/19/24 21:12:26 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_table.fits
+12/19/24 21:12:26 - INFO     - _prepareSpectra: Using the routine for default
+12/19/24 21:12:28 - INFO     - default: Applied spatial bins to lin-data
+12/19/24 21:12:28 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/19/24 21:12:34 - INFO     - default: Log-rebinned the spectra
+12/19/24 21:12:40 - INFO     - default: Log-rebinned the error spectra
+12/19/24 21:12:42 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_AllSpectra.fits
+12/19/24 21:12:44 - INFO     - default: Applied spatial bins to log-data
+12/19/24 21:12:44 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+12/19/24 21:12:44 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+12/19/24 21:12:44 - INFO     - ppxf: Using full spectral library for PPXF
+12/19/24 21:12:44 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+12/19/24 21:12:58 - INFO     - xsl_lin: Prepared the stellar population templates
+12/19/24 21:12:58 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+12/19/24 21:12:58 - INFO     - ppxf: Running PPXF in parallel mode
+12/19/24 21:19:40 - INFO     - ppxf: Running PPXF on 874 spectra took 402.25s using 24 cores
+12/19/24 21:19:40 - INFO     - ppxf: There were no problems in the analysis.
+12/19/24 21:19:40 - INFO     - ppxf: Calculating Lambda_R
+12/19/24 21:19:40 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+12/19/24 21:19:41 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin.fits
+12/19/24 21:19:41 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-bestfit.fits
+12/19/24 21:19:41 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-optimalTemplates.fits
+12/19/24 21:19:41 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 18, in generatePlots
+    gistPlot_kin.plotMaps('KIN', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_kin.py", line 232, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_kin.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+12/19/24 21:19:42 - ERROR    - _plotting: Failed to produce stellar kinematics maps.
+12/19/24 21:19:42 - WARNING  - _emissionLines: The module was turned off.
+12/19/24 21:19:42 - INFO     - _starFormationHistories: Using the starFormationHistories routine 'ppxf.py'
+12/19/24 21:19:42 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+12/19/24 21:20:10 - INFO     - xsl_lin: Prepared the stellar population templates
+12/19/24 21:20:10 - INFO     - ppxf: Using regular spectra without any emission-correction at ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+12/19/24 21:20:10 - INFO     - ppxf: Stellar kinematics are FIXED to the results obtained before.
+12/19/24 21:20:10 - INFO     - ppxf: Running PPXF in parallel mode
+12/19/24 21:33:23 - INFO     - ppxf: Running PPXF on 874 spectra took 793.01s using 24 cores
+12/19/24 21:33:23 - INFO     - ppxf: There were no problems in the analysis.
+12/19/24 21:33:23 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh.fits
+12/19/24 21:33:23 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-weights.fits
+12/19/24 21:33:24 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-bestfit.fits
+12/19/24 21:33:24 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 48, in generatePlots
+    gistPlot_sfh.plotMaps('SFH', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_sfh.py", line 241, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_sfh.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+12/19/24 21:33:24 - ERROR    - _plotting: Failed to produce SFH maps.
+12/19/24 21:33:24 - WARNING  - _lineStrengths: The module was turned off.
+12/19/24 21:33:25 - INFO     - MainPipeline: The GIST completed successfully.
+12/19/24 22:49:43 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/19/24 22:49:43 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/19/24 22:49:43 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/19/24 22:49:44 - INFO     - KECK_KCWIbpr: Reading the error spectra from the cube
+12/19/24 22:49:44 - INFO     - KECK_KCWIbpr: Extracting spatial information:
+                                             * Spatial coordinates are centred to [34.0, 85.0]
+                                             * Spatial pixelsize is 0.1459999999999998
+12/19/24 22:49:44 - INFO     - KECK_KCWIbpr: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/19/24 22:49:45 - INFO     - KECK_KCWIbpr: Shortening spectra to the wavelength range from 3500A to 9000A.
+12/19/24 22:49:46 - INFO     - KECK_KCWIbpr: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A.
+12/19/24 22:49:46 - INFO     - KECK_KCWIbpr: Finished reading the KECK cube! Read a total of 9000 spectra!
+12/19/24 22:49:46 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/19/24 22:49:50 - INFO     - default: Masking defunct spaxels: 1480 spaxels are rejected.
+12/19/24 22:49:50 - INFO     - default: Masking low signal-to-noise spaxels: 2760 spaxels are rejected.
+12/19/24 22:49:50 - INFO     - default: No maskfile specified.
+12/19/24 22:49:50 - INFO     - default: Combined mask: 2762 spaxels are rejected.
+12/19/24 22:49:50 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/19/24 22:49:50 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/19/24 22:49:50 - INFO     - voronoi: Defining the Voronoi bins
+12/19/24 22:49:53 - INFO     - voronoi: 874 Voronoi bins generated!
+12/19/24 22:49:53 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_table.fits
+12/19/24 22:49:53 - INFO     - _prepareSpectra: Using the routine for default
+12/19/24 22:49:54 - INFO     - default: Applied spatial bins to lin-data
+12/19/24 22:49:54 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/19/24 22:50:00 - INFO     - default: Log-rebinned the spectra
+12/19/24 22:50:06 - INFO     - default: Log-rebinned the error spectra
+12/19/24 22:50:08 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_AllSpectra.fits
+12/19/24 22:50:10 - INFO     - default: Applied spatial bins to log-data
+12/19/24 22:50:11 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+12/19/24 22:50:11 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+12/19/24 22:50:11 - INFO     - ppxf: Using full spectral library for PPXF
+12/19/24 22:50:11 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+12/19/24 22:50:15 - INFO     - xsl_lin: Prepared the stellar population templates
+12/19/24 22:50:15 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+12/19/24 22:50:15 - INFO     - ppxf: Running PPXF in parallel mode
+12/19/24 22:56:50 - INFO     - ppxf: Running PPXF on 874 spectra took 394.84s using 24 cores
+12/19/24 22:56:50 - INFO     - ppxf: There were no problems in the analysis.
+12/19/24 22:56:50 - INFO     - ppxf: Calculating Lambda_R
+12/19/24 22:56:50 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+12/19/24 22:56:50 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin.fits
+12/19/24 22:56:50 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-bestfit.fits
+12/19/24 22:56:50 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-optimalTemplates.fits
+12/19/24 22:56:51 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 18, in generatePlots
+    gistPlot_kin.plotMaps('KIN', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_kin.py", line 232, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_kin.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+12/19/24 22:56:51 - ERROR    - _plotting: Failed to produce stellar kinematics maps.
+12/19/24 22:56:51 - WARNING  - _emissionLines: The module was turned off.
+12/19/24 22:56:51 - INFO     - _starFormationHistories: Using the starFormationHistories routine 'ppxf.py'
+12/19/24 22:56:51 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+12/19/24 22:57:30 - INFO     - xsl_lin: Prepared the stellar population templates
+12/19/24 22:57:30 - INFO     - ppxf: Using regular spectra without any emission-correction at ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+12/19/24 22:57:30 - INFO     - ppxf: Stellar kinematics are FIXED to the results obtained before.
+12/19/24 22:57:31 - INFO     - ppxf: Running PPXF in parallel mode
+12/19/24 23:10:56 - INFO     - ppxf: Running PPXF on 874 spectra took 805.67s using 24 cores
+12/19/24 23:10:56 - INFO     - ppxf: There were no problems in the analysis.
+12/19/24 23:10:56 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh.fits
+12/19/24 23:10:56 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-weights.fits
+12/19/24 23:10:57 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-bestfit.fits
+12/19/24 23:10:57 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 48, in generatePlots
+    gistPlot_sfh.plotMaps('SFH', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_sfh.py", line 241, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_sfh.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+12/19/24 23:10:57 - ERROR    - _plotting: Failed to produce SFH maps.
+12/19/24 23:10:57 - WARNING  - _lineStrengths: The module was turned off.
+12/19/24 23:10:58 - INFO     - MainPipeline: The GIST completed successfully.
+12/20/24 01:11:18 - INFO     - _initialise: 
+
+# ============================================== #
+#               THE GIST PIPELINE                #
+#                 Version 3.1.0                  #
+# ============================================== #
+
+12/20/24 01:11:18 - INFO     - _readData: Using the read-in routine for KECK_KCWIbpr
+12/20/24 01:11:18 - INFO     - KECK_KCWIbpr: Reading the KECK-KCWI cube: ./inputData/UGC2369S
+12/20/24 01:11:19 - INFO     - KECK_KCWIbpr: Reading the error spectra from the cube
+12/20/24 01:11:19 - INFO     - KECK_KCWIbpr: Extracting spatial information:
+                                             * Spatial coordinates are centred to [34.0, 85.0]
+                                             * Spatial pixelsize is 0.1459999999999998
+12/20/24 01:11:19 - INFO     - KECK_KCWIbpr: Shifting spectra to rest-frame, assuming a redshift of 0.0312
+12/20/24 01:11:20 - INFO     - KECK_KCWIbpr: Shortening spectra to the wavelength range from 3500A to 9000A.
+12/20/24 01:11:21 - INFO     - KECK_KCWIbpr: Computing the signal-to-noise ratio in the wavelength range from 7800A to 8800A.
+12/20/24 01:11:21 - INFO     - KECK_KCWIbpr: Finished reading the KECK cube! Read a total of 9000 spectra!
+12/20/24 01:11:21 - INFO     - _spatialMasking: Using the spatial masking routine for default
+12/20/24 01:11:25 - INFO     - default: Masking defunct spaxels: 1480 spaxels are rejected.
+12/20/24 01:11:25 - INFO     - default: Masking low signal-to-noise spaxels: 2760 spaxels are rejected.
+12/20/24 01:11:25 - INFO     - default: No maskfile specified.
+12/20/24 01:11:25 - INFO     - default: Combined mask: 2762 spaxels are rejected.
+12/20/24 01:11:25 - INFO     - default: Wrote mask file: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_mask.fits
+12/20/24 01:11:25 - INFO     - _spatialBinning: Using the spatial binning routine for voronoi
+12/20/24 01:11:25 - INFO     - voronoi: Defining the Voronoi bins
+12/20/24 01:11:28 - INFO     - voronoi: 874 Voronoi bins generated!
+12/20/24 01:11:28 - INFO     - voronoi: Wrote Voronoi table: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_table.fits
+12/20/24 01:11:28 - INFO     - _prepareSpectra: Using the routine for default
+12/20/24 01:11:29 - INFO     - default: Applied spatial bins to lin-data
+12/20/24 01:11:29 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra_linear.fits
+12/20/24 01:11:35 - INFO     - default: Log-rebinned the spectra
+12/20/24 01:11:41 - INFO     - default: Log-rebinned the error spectra
+12/20/24 01:11:43 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_AllSpectra.fits
+12/20/24 01:11:45 - INFO     - default: Applied spatial bins to log-data
+12/20/24 01:11:45 - INFO     - default: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+12/20/24 01:11:46 - INFO     - _stellarKinematics: Using the stellarKinematics routine 'ppxf.py'
+12/20/24 01:11:46 - INFO     - ppxf: Using full spectral library for PPXF
+12/20/24 01:11:46 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+12/20/24 01:11:50 - INFO     - xsl_lin: Prepared the stellar population templates
+12/20/24 01:11:50 - INFO     - ppxf: Using V and SIGMA from the MasterConfig file as initial guesses
+12/20/24 01:11:50 - INFO     - ppxf: Running PPXF in parallel mode
+12/20/24 01:18:22 - INFO     - ppxf: Running PPXF on 874 spectra took 391.25s using 24 cores
+12/20/24 01:18:22 - INFO     - ppxf: There were no problems in the analysis.
+12/20/24 01:18:22 - INFO     - ppxf: Calculating Lambda_R
+12/20/24 01:18:22 - INFO     - ppxf: To obtain correct lambda_R measurements, the coordinate system must be centred on the centre of the galaxy. Use the 'READ_DATA|ORIGIN' parameter to do so.
+12/20/24 01:18:22 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin.fits
+12/20/24 01:18:22 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-bestfit.fits
+12/20/24 01:18:22 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_kin-optimalTemplates.fits
+12/20/24 01:18:23 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 18, in generatePlots
+    gistPlot_kin.plotMaps('KIN', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_kin.py", line 232, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_kin.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+12/20/24 01:18:23 - ERROR    - _plotting: Failed to produce stellar kinematics maps.
+12/20/24 01:18:23 - WARNING  - _emissionLines: The module was turned off.
+12/20/24 01:18:23 - INFO     - _starFormationHistories: Using the starFormationHistories routine 'ppxf.py'
+12/20/24 01:18:23 - INFO     - _prepareTemplates: Using the routine for 'xsl_lin.py'
+12/20/24 01:18:59 - INFO     - xsl_lin: Prepared the stellar population templates
+12/20/24 01:18:59 - INFO     - ppxf: Using regular spectra without any emission-correction at ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_BinSpectra.fits
+12/20/24 01:19:00 - INFO     - ppxf: Stellar kinematics are FIXED to the results obtained before.
+12/20/24 01:19:00 - INFO     - ppxf: Running PPXF in parallel mode
+12/20/24 01:32:21 - INFO     - ppxf: Running PPXF on 874 spectra took 801.27s using 24 cores
+12/20/24 01:32:21 - INFO     - ppxf: There were no problems in the analysis.
+12/20/24 01:32:21 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh.fits
+12/20/24 01:32:21 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-weights.fits
+12/20/24 01:32:21 - INFO     - ppxf: Wrote: ./results/./UGC2369bin20-SNRcut/UGC2369bin20-SNRcut_sfh-bestfit.fits
+12/20/24 01:32:22 - ERROR    - _plotting: missing font metrics file: cmr17
+Traceback (most recent call last):
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/_plotting.py", line 48, in generatePlots
+    gistPlot_sfh.plotMaps('SFH', config['GENERAL']['OUTPUT'])
+  File "/disk/bifrost/yuanze/software/gist-development/gistPipeline/plotting/gistPlot_sfh.py", line 241, in plotMaps
+    plt.savefig(os.path.join(outdir,rootname)+'_sfh.pdf', bbox_inches='tight', pad_inches=0.3)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/pyplot.py", line 859, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 2311, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2193, in print_figure
+    self.figure.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/figure.py", line 1864, in draw
+    renderer, self, artists, self.suppressComposite)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 131, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/cbook/deprecation.py", line 411, in wrapper
+    return func(*inner_args, **inner_kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2747, in draw
+    mimage._draw_list_compositing_images(renderer, self, artists)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/image.py", line 156, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/artist.py", line 41, in draw_wrapper
+    return draw(artist, renderer, *args, **kwargs)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1166, in draw
+    renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in _get_tick_bboxes
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/axis.py", line 1092, in <listcomp>
+    for tick in ticks if tick.label1.get_visible()],
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 902, in get_window_extent
+    bbox, info, descent = self._get_layout(self._renderer)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/text.py", line 289, in _get_layout
+    ismath="TeX" if self.get_usetex() else False)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/backends/_backend_pdf_ps.py", line 87, in get_text_width_height_descent
+    s, fontsize, renderer=self)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/texmanager.py", line 425, in get_text_width_height_descent
+    page, = dvi
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 251, in __iter__
+    while self._read():
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 325, in _read
+    self._dtable[byte](self, byte)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 174, in wrapper
+    return method(self, *[f(self, byte-min) for f in get_args])
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 468, in _fnt_def
+    self._fnt_def_real(k, c, s, d, a, l)
+  File "/disk/bifrost/yuanze/anaconda3/envs/gist-dev/lib/python3.6/site-packages/matplotlib/dviread.py", line 475, in _fnt_def_real
+    raise FileNotFoundError("missing font metrics file: %s" % fontname)
+FileNotFoundError: missing font metrics file: cmr17
+12/20/24 01:32:22 - ERROR    - _plotting: Failed to produce SFH maps.
+12/20/24 01:32:22 - WARNING  - _lineStrengths: The module was turned off.
+12/20/24 01:32:23 - INFO     - MainPipeline: The GIST completed successfully.
