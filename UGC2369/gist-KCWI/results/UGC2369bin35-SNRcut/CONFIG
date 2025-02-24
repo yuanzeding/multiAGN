@@ -38,12 +38,12 @@ KIN:
   METHOD: ppxf
   SPEC_MASK: specMask_KIN_new
   LMIN: 8000
-  LMAX: 8900
+  LMAX: 9000
   SIGMA: 100
   MOM: 4
   ADEG: -1
   MDEG: 2
-  REDDENING: null
+  REDDENING: 0.0878
   MC_PPXF: 0
 GAS:
   METHOD: false
